@@ -2,6 +2,8 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/devsonket/devsonket.github.io.svg)](https://github.com/devsonket/devsonket.github.io/graphs/contributors)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![T-Shirt Sponsor - Blace](https://scontent.fcgp7-1.fna.fbcdn.net/v/t1.0-9/134396747_3729637350448926_8167604635320423942_o.jpg?_nc_cat=105&ccb=2&_nc_sid=730e14&_nc_ohc=uzb-SKXa37AAX8L7TiH&_nc_oc=AQmie27vpmxCa2HQuAPx9O1f11i-gQi6YhMr7UJ79tRoK9DKu5DV2exqmNKPqBXIMFc&_nc_ht=scontent.fcgp7-1.fna&oh=2eab822bc886f0f3f27d2ab38893fc14&oe=601A3155)](https://blace.com.bd/)
+
 ## উদ্দেশ্য
 
 ডেভেলপারদের জন্যে চিটশিট খুবই কাজের জিনিস। আমাদের পক্ষে অনেক কমান্ড বা কোনো লাইব্রেরীর সব ফাংশন একসাথে মনে রাখা সম্ভব হয় না। সেক্ষেত্রে আমরা যদি একটা লিস্ট করি যে অমুক কমান্ড বা ফাংশন অমুক কাজ করে তাহলে খুব সহজেই পরবর্তিতে কেউ কাজ করতে গেলে শুধুমাত্র এই লিস্টগুলো দেখলেই প্রয়োজনীয় সবকিছু খুঁজে পাবে। আমরা আমাদের পুরো নলেজটাকে বিভিন্ন বিভাগে ভাগ করে শুধুমাত্র আসল ফাংশানালিটিগুলো খুব ছোট্টো করে বর্ণনা দিয়ে লিস্ট করতে পারি। যেগুলোতে পরবর্তিতে কোনো ডেভেলপার জাস্ট একটু চোখ বুলিয়ে নিলেই তার কাঙ্ক্ষিত জিনিসটা খুঁজে পাবে। এরকম চিটশিট [এখানেও](https://devhints.io/) পাবেন। কিন্তু আমাদের লক্ষ্য হচ্ছে সম্পূর্ণ বাংলায় চিটশিট করা।
@@ -36,10 +38,11 @@ _ভবিষ্যতে নতুন কোনো ফরম্যাটের 
 
 ## কমিউনিটির আলোচনা
 
-আমাদের স্ল্যাক এ একটা ওয়ার্কস্পেস আছে। [এই লিঙ্কে](https://join.slack.com/t/devsonket/shared_invite/enQtNDgxNDIwNTkyNjQyLWYwN2ZkZGMyOTNhMTM3ZDU4NzE5NDFjY2ExMTM3YWMzNWFhODU4NjJhMDJlNjBlMTBhY2VkZDRjY2E1ZWI3MTc) ক্লিক করে সেখানে জয়েন করতে পারবেন। আপনার কোনো ব্যাপারে সহায়তা লাগলে, কোনো রকম সাজেশন থাকলে অথবা যেকোনো ব্যাপারে খোলামেলাভাবে সেখানে আমাদের সবার সাথে আলোচনা করতে পারবেন।
+আমাদের ফেস্‌বুকে একটা গ্রুপ আছে। [এই লিঙ্কে](https://www.facebook.com/groups/675646289594096) ক্লিক করে সেখানে জয়েন করতে পারবেন। আপনার কোনো ব্যাপারে সহায়তা লাগলে, কোনো রকম সাজেশন থাকলে অথবা যেকোনো ব্যাপারে খোলামেলাভাবে সেখানে আমাদের সবার সাথে আলোচনা করতে পারবেন।
 
 ## স্পন্সর(বিশেষভাবে ধন্যবাদ)
 
 - [Nazir Ahmed Sabbir](https://github.com/NaSabbir)
+- [Blace](https://blace.com.bd/)
 
 আপনিও যদি **ডেভ সংকেত**কে কোনোভাবে স্পন্সর করতে চান, অথবা **ডেভ সংকেত** এর হয়ে কোনো ইভেন্টের আয়োজন করতে চান তাহলে অবশ্যই আমাদের জানাবেন।

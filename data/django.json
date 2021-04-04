@@ -39,6 +39,39 @@
       ]
     },
     {
+      "title": "pip কমান্ডস", 
+      "items": [
+        {
+          "definition": "pip ভার্সন দেখা",
+          "code": "pip --version"
+        },
+        {
+          "definition": "pip আপগ্রেড করা",
+          "code": "python -m pip install --upgrade pip"
+        },
+        {
+          "definition": "django ইন্সটল করা",
+          "code": "pip install django"
+        },
+        {
+          "definition": "যেকোনো প্যাকেজ ডিপেন্ডেন্সী ইন্সটল করা",
+          "code": "pip install <package_name>"
+        },
+        {
+          "definition": "যেকোনো প্যাকেজ ডিপেন্ডেন্সী আনইন্সটল করা",
+          "code": "pip uninstall <package_name>"
+        },
+        {
+          "definition": "প্যাকেজ ডিপেন্ডেন্সী লিস্ট করা",
+          "code": "pip list"
+        },
+        {
+          "definition": "প্যাকেজ ডিপেন্ডেন্সী সেভ করা",
+          "code": "pip freeze > requirements.txt"
+        }
+      ]
+    },
+    {
       "title": "প্রোজেক্ট",
       "items": [
         {
@@ -57,6 +90,10 @@
         {
           "definition": "অ্যাপ তৈরী করা",
           "code": "python manage.py startapp <app_name>"
+        },
+        {
+          "definition": "অ্যাপ মাইগ্রেশনের জন্য",
+          "code": "python manage.py makemigrations <app_name>"
         },
         {
           "definition": "মাইগ্রেশনের জন্য",
@@ -87,6 +124,31 @@
         {
           "definition": "স্ট্যাটিক ফাইল খুঁজে বের করা",
           "code": "python manage.py findstatic staticfile [staticfile ...]"
+        }
+      ]
+    },
+    {
+      "title": "টেমপ্লেট ট্যাগ",
+      "items": [
+        {
+          "definition":"টেমপ্টেল এক্সটেন্ড করা",
+          "code": "{%extends '<html file name>'%}"
+        },
+        {
+          "definition":"টেমপ্টেল এর ভেতরে স্ট্যাটিক ফাইল লোড করা",
+          "code": "{%load static%}"
+        },
+        {
+          "definition":"টেমপ্টেল এর ভেতরে ব্লক তৈরি করা",
+          "code": "{%block <block name>%} ... {%endblock <block name>%}"
+        },
+        {
+          "definition":"টেমপ্টেল এর ভেতরে কন্ডিশন তৈরি করা",
+          "code": "{%if <condition>%} .. {%elif <condition>%} .. {%else%}...{%endif%}"
+        },
+        {
+          "definition":"টেমপ্টেল এর ভেতরে লুপ তৈরি",
+          "code": "{%for i in <context data name>%} ... {%endfor%}"
         }
       ]
     }
