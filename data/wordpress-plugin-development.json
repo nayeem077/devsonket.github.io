@@ -301,30 +301,39 @@
             ]
         },
         {
-            "title": "প্লাগইন সিকিউরিটি (ইউসার রোলেস)",
-            "items": [{
-                    "code": "add_role()"
-                },
-                {
-                    "code": "remove_role()"
-                },
-                {
-                    "code": "get_role()"
-                },
-                {
-                    "code": "add_cap()"
-                },
-                {
-                    "code": "remove_cap()"
-                },
-                {
-                    "code": "user_can()"
-                },
-                {
-                    "code": "current_user_can()"
-                }
-            ]
+    "title": "প্লাগইন সিকিউরিটি (ইউসার রোলেস)",
+    "items": [
+        {
+            "definition": "নতুন ইউসার রোল তৈরির জন্য",
+            "code": "add_role( string $role, string $display_name, array $capabilities = array() )"
         },
+        {
+            "definition": "একটি ইউসার রোল সরানোর জন্য",
+            "code": "remove_role( string $role )"
+        },
+        {
+            "definition": "একটি রোলের তথ্য পেতে",
+            "code": "get_role( string $role )"
+        },
+        {
+            "definition": "কোনো রোলের জন্য নতুন ক্যাপাবিলিটি যোগ করার জন্য",
+            "code": "add_cap( string $role, string $cap, bool $grant = true )"
+        },
+        {
+            "definition": "একটি রোল থেকে ক্যাপাবিলিটি সরানোর জন্য",
+            "code": "remove_cap( string $role, string $cap )"
+        },
+        {
+            "definition": "নির্দিষ্ট একজন ইউসার কোনো কাজ করতে পারবে কিনা তা যাচাইয়ের জন্য",
+            "code": "user_can( WP_User $user, string $capability )"
+        },
+        {
+            "definition": "বর্তমান ইউসার কোনো নির্দিষ্ট কাজ করতে পারে কিনা যাচাইয়ের জন্য",
+            "code": "current_user_can( string $capability )"
+        }
+    ]
+}
+,
         {
             "title": "প্লাগইন সিকিউরিটি (ভ্যালিডেশন)",
             "items": [{
