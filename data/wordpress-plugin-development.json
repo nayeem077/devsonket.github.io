@@ -370,63 +370,82 @@
             ]
         },
         {
-            "title": "প্লাগইন সিকিউরিটি (সিকিউরিং ইনপুট)",
-            "items": [{
-                    "code": "sanitize_email()"
-                },
-                {
-                    "code": "sanitize_file_name()"
-                },
-                {
-                    "code": "sanitize_hex_color()"
-                },
-                {
-                    "code": "sanitize_hex_color_no_hash()"
-                },
-                {
-                    "code": "sanitize_html_class()"
-                },
-                {
-                    "code": "sanitize_key()"
-                },
-                {
-                    "code": "sanitize_meta()"
-                },
-                {
-                    "code": "sanitize_mime_type()"
-                },
-                {
-                    "code": "sanitize_option()"
-                },
-                {
-                    "code": "sanitize_sql_orderby()"
-                },
-                {
-                    "code": "sanitize_text_field()"
-                },
-                {
-                    "code": "sanitize_title()"
-                },
-                {
-                    "code": "sanitize_title_for_query()"
-                },
-                {
-                    "code": "sanitize_title_with_dashes()"
-                },
-                {
-                    "code": "sanitize_user()"
-                },
-                {
-                    "code": "esc_url_raw()"
-                },
-                {
-                    "code": "wp_filter_post_kses()"
-                },
-                {
-                    "code": "wp_filter_nohtml_kses()"
-                }
-            ]
+    "title": "প্লাগইন সিকিউরিটি (সিকিউরিং ইনপুট)",
+    "items": [
+        {
+            "definition": "ইমেইল ঠিকানা স্যানিটাইজ করার জন্য",
+            "code": "sanitize_email( string $email )"
         },
+        {
+            "definition": "ফাইলের নাম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_file_name( string $filename )"
+        },
+        {
+            "definition": "হেক্সাডেসিমাল রঙ স্যানিটাইজ করার জন্য (হ্যাশসহ)",
+            "code": "sanitize_hex_color( string $color )"
+        },
+        {
+            "definition": "হেক্সাডেসিমাল রঙ স্যানিটাইজ করার জন্য (হ্যাশ ছাড়া)",
+            "code": "sanitize_hex_color_no_hash( string $color )"
+        },
+        {
+            "definition": "HTML ক্লাস স্যানিটাইজ করার জন্য",
+            "code": "sanitize_html_class( string $class, string $fallback = '' )"
+        },
+        {
+            "definition": "কী স্যানিটাইজ করার জন্য",
+            "code": "sanitize_key( string $key )"
+        },
+        {
+            "definition": "মেটা ডেটা স্যানিটাইজ করার জন্য",
+            "code": "sanitize_meta( string $meta_key, mixed $meta_value, string $object_type, string $object_subtype )"
+        },
+        {
+            "definition": "মাইম টাইপ স্যানিটাইজ করার জন্য",
+            "code": "sanitize_mime_type( string $mime_type )"
+        },
+        {
+            "definition": "অপশন ভ্যালু স্যানিটাইজ করার জন্য",
+            "code": "sanitize_option( string $option, string $value )"
+        },
+        {
+            "definition": "SQL ORDER BY ক্লজ স্যানিটাইজ করার জন্য",
+            "code": "sanitize_sql_orderby( string $orderby_clause )"
+        },
+        {
+            "definition": "টেক্সট ফিল্ড স্যানিটাইজ করার জন্য",
+            "code": "sanitize_text_field( string $str )"
+        },
+        {
+            "definition": "শিরোনাম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_title( string $title, string $fallback_title = '', string $context = 'save' )"
+        },
+        {
+            "definition": "কোয়েরির জন্য শিরোনাম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_title_for_query( string $title )"
+        },
+        {
+            "definition": "ড্যাশসহ শিরোনাম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_title_with_dashes( string $title, string $raw_title = '', string $context = 'save' )"
+        },
+        {
+            "definition": "ইউসারনেম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_user( string $username, bool $strict = false )"
+        },
+        {
+            "definition": "ইউআরএল স্যানিটাইজ করার জন্য (রো ইউআরএলকে সিকিউর করার জন্য)",
+            "code": "esc_url_raw( string $url, array $protocols = null )"
+        },
+        {
+            "definition": "HTML ফিল্টার করার জন্য পোস্ট কন্টেন্ট স্যানিটাইজ করে",
+            "code": "wp_filter_post_kses( string $data )"
+        },
+        {
+            "definition": "HTML ব্যতীত কন্টেন্ট স্যানিটাইজ করার জন্য",
+            "code": "wp_filter_nohtml_kses( string $data )"
+        }
+    ]
+},
         {
             "title": "প্লাগইন সিকিউরিটি (সিকিউরিং আউটপুট)",
             "items": [{
