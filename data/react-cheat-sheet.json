@@ -81,6 +81,20 @@
       ]
     },
     {
+      "title": "রিঅ্যাক্ট JS এ ফ্র্যাগমেন্ট (Fragment) ব্যবহার",
+      "items": [
+        {
+          "definition": "ফ্র্যাগমেন্ট হল একটি ওয়ার্পার যা DOM এ অতিরিক্ত নোড যোগ না করেই একাধিক এলিমেন্টকে গ্রুপ করতে সাহায্য করে।",
+          "code": "<>\n  <h1>Title</h1>\n  <p>This is a paragraph.</p>\n</>"
+        },
+        {
+          "definition": "React.Fragment এবং <> </> এর মাধ্যমে JSX কে গ্রুপ করা সম্ভব, তবে ছোট ট্যাগ ব্যবহারে React.Fragment এর পরিবর্তে <> </> ব্যবহার করা সুবিধাজনক।",
+          "code": "<React.Fragment>\n  <h1>Header</h1>\n  <span>Subtitle</span>\n</React.Fragment>"
+        }
+      ]
+    },
+
+    {
       "title": "স্টেটলেস-কম্পোনেন্ট ধারনা",
       "items": [
         {
