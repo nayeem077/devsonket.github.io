@@ -905,6 +905,71 @@
             ]
         },
         {
+            "title": "নাম্বার হেল্পার",
+            "items": [
+                {
+                    "definition": "কোন সংখ্যার রিডএবল ফরম্যাট দেখতে",
+                    "code": "Number::abbreviate()"
+                },
+                {
+                    "definition": "কোন সংখ্যা একটি নির্দিষ্ট সীমার মধ্যে রাখতে",
+                    "code": "Number::clamp()"
+                },
+                {
+                    "definition": "কোন সংখ্যাকে কাসেন্সি ফরম্যাটে প্রকাশ করতে",
+                    "code": "Number::currency()"
+                },
+                {
+                    "definition": "ডিফল্ট কারেন্সি সেট করতে",
+                    "code": "Number::defaultCurrency()"
+                },
+                {
+                    "definition": "ডিফল্ট লোকেল সেট করতে",
+                    "code": "Number::defaultLocale()"
+                },
+                {
+                    "definition": "কোন সংখ্যাকে ফাইল সাইজ হিসেবে প্রকাশ করতে",
+                    "code": "Number::fileSize()"
+                },
+                {
+                    "definition": "কোন সংখ্যাকে হিউম্যান রিডেবল ফরম্যাটে প্রকাশ করতে",
+                    "code": "Number::forHumans()"
+                },
+                {
+                    "definition": "লোকেল অনুযায়ী সংখ্যা ফরম্যাট করতে",
+                    "code": "Number::format()"
+                },
+                {
+                    "definition": "সংখ্যার অর্ডিনাল প্রকাশ করতে",
+                    "code": "Number::ordinal()"
+                },
+                {
+                    "definition": "নির্দিষ্ট রেঞ্জ ও স্টেপে সংখ্যা জোড়া তৈরি করতে",
+                    "code": "Number::pairs()"
+                },
+                {
+                    "definition": "সংখ্যার শতাংশ ফরম্যাটে প্রকাশ করতে",
+                    "code": "Number::percentage()"
+                },
+                {
+                    "definition": "সংখ্যাকে শব্দে প্রকাশ করতে",
+                    "code": "Number::spell()"
+                },
+                {
+                    "definition": "দশমিক পয়েন্টের পরের জিরো বাদ দেওয়ার জন্য",
+                    "code": "Number::trim()"
+                },
+                {
+                    "definition": "ডিফল্ট লোকেল সেট করতে",
+                    "code": "Number::useLocale()"
+                },
+                {
+                    "definition": "ডিফল্ট মুদ্রা সেট করতে",
+                    "code": "Number::useCurrency()"
+                }
+            ]
+        },
+        {
             "title": "মডেল এর গুরুতপূর্ন তথ্য",
             "items": [
                 {
