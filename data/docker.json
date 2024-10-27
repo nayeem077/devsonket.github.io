@@ -154,7 +154,11 @@
                 },
                 {
                     "definition": "নির্দিষ্ট কন্টেইনারে প্রবেশ করতে",
-                    "code": "docker-compose exec container /bin/bash"
+                    "code": "docker-compose exec <container_id> /bin/bash"
+                },
+                {
+                    "definition": "নির্দিষ্ট কন্টেইনারে যে কোন কমান্ড রান করতে",
+                    "code": "docker-compose exec -it <container_id> <command>"
                 },
                 {
                     "definition": "নেটওয়ার্ক সহ কন্টেইনার remove করতে",
