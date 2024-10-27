@@ -118,6 +118,10 @@
                     "definition": "ডেভ ডিপেনডেন্সি হিসেবে প্যাকেজ ইনস্টল করা",
                     "code": "yarn add <package-name> --dev"
                 },
+                 {
+                    "definition": "ডেভ ডিপেনডেন্সি হিসেবে প্যাকেজ ইনস্টল করা ২",
+                    "code": "yarn add <package-name> -D"
+                },
                 {
                     "definition": "লোকাল প্যাকেজ আনইনস্টল করতে",
                     "code": "yarn remove <package-name>"
