@@ -29,6 +29,10 @@
                 {
                     "definition": "পাবলিশিং প্যাকেজ আপডেট করতে",
                     "code": "yarn version <major/minor/patch>"
+                },
+                {
+                    "definition": "yarn ভার্শন আপগ্রেড করতে",
+                    "code": "yarn set version <version>"
                 }
             ]
         },
