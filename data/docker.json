@@ -75,6 +75,10 @@
                 },
                 {
                     "definition": "সব ডকার কন্টেইনার stop করতে",
+                    "code": "docker stop $(docker ps -q)"
+                },
+                {
+                    "definition": "সব ডকার কন্টেইনার kill করতে",
                     "code": "docker kill $(docker ps -q)"
                 },
                 {
