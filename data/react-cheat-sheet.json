@@ -93,7 +93,27 @@
         }
       ]
     },
-
+    {
+        "title": "রিঅ্যাক্ট JS এ কন্ডিশনাল রেন্ডারিং (Conditional Rendering)",
+        "items": [
+          {
+            "definition": "একটি কন্ডিশন তৈরী করা যাতে রেন্ডারিং নির্ভর করবে",
+            "code": "const isLoggedIn = true;"
+          },
+          {
+            "definition": "একটি কন্ডিশনাল এক্সপ্রেশন ব্যবহার করে ভিন্ন JSX রেন্ডার করা",
+            "code": "const greeting = isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Sign In</h1>;"
+          },
+          {
+            "definition": "logical && অপারেটর ব্যবহার করে কন্ডিশনাল রেন্ডারিং করা - যখন কন্ডিশনটি true হবে তখনই JSX রেন্ডার হবে",
+            "code": "isLoggedIn && <h1>Welcome Back!</h1>"
+          },
+          {
+            "definition": "logical || অপারেটর ব্যবহার করে কন্ডিশনাল রেন্ডারিং করা - যখন কন্ডিশনটি false হবে তখনই JSX রেন্ডার হবে",
+            "code": "isLoggedIn || <h1>Welcome Back!</h1>"
+          }
+      ]
+    },
     {
       "title": "স্টেটলেস-কম্পোনেন্ট ধারনা",
       "items": [
@@ -141,6 +161,19 @@
         {
           "definition": "কম্পোনেন্ট নতুন প্রপস গ্রহন করে তা রেন্ডার করার পর  ইনভোক হয়",
           "code": "componentDidUpdate()"
+        }
+      ]
+    },
+    {
+      "title": "রিঅ্যাক্ট JS এ কন্ডিশনাল রেন্ডারিং (Conditional Rendering) এবং টার্নারি অপারেটর (Ternary Operator) এর পার্থক্য",
+      "items": [
+        {
+          "definition": "কন্ডিশনাল রেন্ডারিং - রিঅ্যাক্ট এ একটি কন্ডিশনের উপর নির্ভর করে ভিন্ন ভিন্ন JSX রেন্ডার করতে ব্যবহৃত হয়। এটি বিভিন্ন ধরণের সিনট্যাক্সের সাহায্যে করা যায়, যেমন টার্নারি অপারেটর, logical && এবং || অপারেটর ব্যবহার করে।",
+          "code": "isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Sign In</h1>;",
+        },
+        {
+          "definition": "টার্নারি অপারেটর - কন্ডিশনের উপর ভিত্তি করে দুটি মানের মধ্যে একটি রিটার্ন করে। এটি শুধুমাত্র একটি এক্সপ্রেশন হিসাবে ব্যবহৃত হয় এবং 'if-else' এর সংক্ষিপ্ত রূপ হিসেবে কাজ করে।",
+          "example": "const greeting = isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Sign In</h1>;",
         }
       ]
     },
@@ -302,6 +335,27 @@
           "code": "useEffect(() => {\n// Update the document title using the browser API \ndocument.title = `You clicked ${count} times`;\n});"
         }
       ]
+    },
+    {
+      "title": "রিঅ্যাক্ট JS এ কন্ডিশনাল রেন্ডারিং (Conditional Rendering)",
+      "iitems": [
+        {
+          "definition": "একটি কন্ডিশন তৈরী করা যেই কন্ডিসনে রেন্ডারিং নির্ভর করবে",
+          "code": "const isLoggedIn = true;"
+        },
+        {
+          "definition": "একটি কন্ডিশনাল এক্সপ্রেশন ব্যবহার করে ভিন্ন JSX রেন্ডার করা",
+          "code": "const greeting = isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Sign In</h1>;"
+        },
+        {
+          "definition": "logical && অপারেটর ব্যবহার করে কন্ডিশনাল রেন্ডারিং করা - যখন কন্ডিশনটি true হবে তখনই JSX রেন্ডার হবে",
+          "code": "isLoggedIn && <h1>Welcome Back!</h1>"
+        },
+        {
+          "definition": "logical || অপারেটর ব্যবহার করে কন্ডিশনাল রেন্ডারিং করা - যখন কন্ডিশনটি false হবে তখনই অন্যটি রেন্ডার হবে",
+          "code": "const greeting = isLoggedIn || <h1>Please Sign In</h1>;"
+        },
+      ],
     }
   ]
 }
