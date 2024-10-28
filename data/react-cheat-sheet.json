@@ -81,6 +81,27 @@
       ]
     },
     {
+        "title": "রিঅ্যাক্ট JS এ কন্ডিশনাল রেন্ডারিং (Conditional Rendering)",
+        "items": [
+          {
+            "definition": "একটি কন্ডিশন তৈরী করা যাতে রেন্ডারিং নির্ভর করবে",
+            "code": "const isLoggedIn = true;"
+          },
+          {
+            "definition": "একটি কন্ডিশনাল এক্সপ্রেশন ব্যবহার করে ভিন্ন JSX রেন্ডার করা",
+            "code": "const greeting = isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Sign In</h1>;"
+          },
+          {
+            "definition": "logical && অপারেটর ব্যবহার করে কন্ডিশনাল রেন্ডারিং করা - যখন কন্ডিশনটি true হবে তখনই JSX রেন্ডার হবে",
+            "code": "isLoggedIn && <h1>Welcome Back!</h1>"
+          },
+          {
+            "definition": "logical || অপারেটর ব্যবহার করে কন্ডিশনাল রেন্ডারিং করা - যখন কন্ডিশনটি false হবে তখনই JSX রেন্ডার হবে",
+            "code": "isLoggedIn || <h1>Welcome Back!</h1>"
+          }
+      ]
+    },
+    {
       "title": "স্টেটলেস-কম্পোনেন্ট ধারনা",
       "items": [
         {
