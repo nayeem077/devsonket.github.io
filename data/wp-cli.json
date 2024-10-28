@@ -29,10 +29,6 @@
 					"code": "wp core multisite-convert"
 				},
 				{
-					"definition": "সিঙ্গেল-সাইট ইনস্টলেশনকে মাল্টিসাইট ইনস্টলেশনে পরিণত করবে",
-					"code": "wp core multisite-convert"
-				},
-				{
 					"definition": "ওয়ার্ডপ্রেস মাল্টিসাইট ইনস্টল করবে",
 					"code": "wp core multisite-install"
 				},
