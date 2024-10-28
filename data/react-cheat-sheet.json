@@ -309,6 +309,27 @@
           "code": "useEffect(() => {\n// Update the document title using the browser API \ndocument.title = `You clicked ${count} times`;\n});"
         }
       ]
+    },
+    {
+      "title": "রিঅ্যাক্ট JS এ কন্ডিশনাল রেন্ডারিং (Conditional Rendering)",
+      "iitems": [
+        {
+          "definition": "একটি কন্ডিশন তৈরী করা যেই কন্ডিসনে রেন্ডারিং নির্ভর করবে",
+          "code": "const isLoggedIn = true;"
+        },
+        {
+          "definition": "একটি কন্ডিশনাল এক্সপ্রেশন ব্যবহার করে ভিন্ন JSX রেন্ডার করা",
+          "code": "const greeting = isLoggedIn ? <h1>Welcome Back!</h1> : <h1>Please Sign In</h1>;"
+        },
+        {
+          "definition": "logical && অপারেটর ব্যবহার করে কন্ডিশনাল রেন্ডারিং করা - যখন কন্ডিশনটি true হবে তখনই JSX রেন্ডার হবে",
+          "code": "isLoggedIn && <h1>Welcome Back!</h1>"
+        },
+        {
+          "definition": "logical || অপারেটর ব্যবহার করে কন্ডিশনাল রেন্ডারিং করা - যখন কন্ডিশনটি false হবে তখনই অন্যটি রেন্ডার হবে",
+          "code": "const greeting = isLoggedIn || <h1>Please Sign In</h1>;"
+        },
+      ],
     }
   ]
 }
