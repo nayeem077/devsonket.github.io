@@ -562,6 +562,10 @@
                 {
                     "definition": "যেকোনো কমান্ডের সাহায্য পেতে",
                     "code": "dart help pub outdated" 
+                },
+                {
+                    "definition": "একটি নতুন ডার্ট সিএলআই প্রোজেক্ট তৈরি করতে",
+                    "code": "dart create dart_cli -t console" 
                 }
             ]
         },
