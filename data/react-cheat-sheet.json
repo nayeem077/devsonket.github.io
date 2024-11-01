@@ -356,6 +356,24 @@
           "code": "const greeting = isLoggedIn || <h1>Please Sign In</h1>;"
         },
       ],
+    },
+    {
+  "title": "রিঅ্যাক্ট JS এ কন্ট্রোলড এবং আনকন্ট্রোলড কম্পোনেন্টের পার্থক্য",
+  "items": [
+    {
+      "definition": "কন্ট্রোলড কম্পোনেন্ট: কন্ট্রোলড কম্পোনেন্টে ইনপুট ভ্যালু React এর স্টেট দ্বারা নিয়ন্ত্রিত হয়। ইউজারের ইনপুট পরিবর্তনের সময় স্টেট আপডেট হয়।",
+      "code": "const [value, setValue] = useState('');\n\n<input type=\"text\" value={value} onChange={(e) => setValue(e.target.value)} />"
+    },
+    {
+      "definition": "আনকন্ট্রোলড কম্পোনেন্ট: আনকন্ট্রোলড কম্পোনেন্টে ইনপুট ভ্যালু সরাসরি DOM দ্বারা পরিচালিত হয়। React এর স্টেট ব্যবহারের প্রয়োজন নেই।",
+      "code": "const inputRef = useRef(null);\n\n<input type=\"text\" ref={inputRef} />"
+    },
+    {
+      "definition": "কন্ট্রোলড কম্পোনেন্টে ফর্ম ভ্যালিডেশন এবং ইনপুট ভ্যালুতে নির্দিষ্ট নিয়ন্ত্রণ রাখা সহজ। আনকন্ট্রোলড কম্পোনেন্টে নিয়ন্ত্রণ সীমিত থাকে এবং DOM থেকে সরাসরি ভ্যালু পেতে হয়।",
+      "code": "// কন্ট্রোলড কম্পোনেন্টে ভ্যালিডেশন উদাহরণ\nconst handleSubmit = (e) => {\n  e.preventDefault();\n  if (value.length > 5) {\n    // ভ্যালিডেশন সফল\n  }\n};"
     }
+  ]
+}
+
   ]
 }
