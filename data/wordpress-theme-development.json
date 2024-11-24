@@ -4,281 +4,461 @@
     "slug": "wordpress-theme-development",
     "description": "ওয়ার্ডপ্রেস হল একটি সিএমএস (CMS) বা কন্টেন্ট ম্যানেজমেন্ট সিস্টেম।  আরেকটু বিশদ বলতে গেলে, ওয়ার্ডপ্রেস হল ফ্রী ও ওপেনসোর্স ব্লগিং টুল এবং একটি শক্তিশালী কন্টেন্ট ম্যানেজমেন্ট সিস্টেম যা পিএইচপি এবং মাইএসকিউএল এর উপর ভিত্তি করে তৈরিকৃত।",
     "colorPref": "#3A241D",
-    "contents": [
-      {
-        "title": "ওয়ার্ডপ্রেস থিম বেসিক টেমপ্লেট ফাইল",
-        "items": [
-          {
-            "definition": "স্টাইল শীট ফাইল",
-            "code": "style.css"
-          }, {
-            "definition": "হোম পেজ ফাইল",
-            "code": "index.php"
-          }, {
-            "definition": "সিঙ্গেল পোস্ট ফাইল",
-            "code": "single.php"
-          }, {
-            "definition": "আর্কাইভ বা ক্যাটাগরি ফাইল",
-            "code": "archive.php"
-          }, {
-            "definition": "সার্চ ফর্ম ফাইল",
-            "code": "searchform.php"
-          }, {
-            "definition": "কন্টেন্ট সার্চ ফাইল",
-            "code": "search.php"
-          }, {
-            "definition": "এরর পেজ",
-            "code": "404.php"
-          }, {
-            "definition": "কমেন্টস টেম্পলেট ফাইল",
-            "code": "comments.php"
-          }, {
-            "definition": "ফুটার কন্টেন্ট ফাইল",
-            "code": "footer.php"
-          }, {
-            "definition": "হেডার কন্টেন্ট ফাইল",
-            "code": "header.php"
-          }, {
-            "definition": "সাইডবার কন্টেন্ট ফাইল",
-            "code": "sidebar.php"
-          }, {
-            "definition": "সিঙ্গেল পেজ ফাইল",
-            "code": "page.php"
-          }
-        ]
-      },
-      {
-        "title": "হেডারের জন্য পিএইচপি টুকিটাকি",
-        "items": [
-          {
-            "definition": "সাইটের শিরোনাম",
-            "code": "bloginfo('name');"
-          }, {
-            "definition": "নির্দিষ্ট পোস্ট বা পৃষ্ঠার শিরোনাম",
-            "code": "wp_title();"
-          }, {
-            "definition": "style.css ফাইল এর অবস্থান",
-            "code": "get_stylesheet_directory_uri();"
-          }, {
-            "definition": "সাইটের Pingback URL",
-            "code": "bloginfo('pingback_url');"
-          }, {
-            "definition": "সাইটের থিম ফাইলের লোকেশন",
-            "code": "bloginfo('template_url');"
-          }, {
-            "definition": "সাইটের ওয়ার্ডপ্রেস ভার্সন",
-            "code": "bloginfo('version');"
-          }, {
-            "definition": "সাইটের Atom URL",
-            "code": "bloginfo('atom_url');"
-          }, {
-            "definition": "সাইটের RSS2 URL",
-            "code": "bloginfo('rss2_url');"
-          }, {
-            "definition": "সাইটের Exact URL",
-            "code": "get_site_url();"
-          }, {
-            "definition": "সাইটের নাম",
-            "code": "bloginfo('name');"
-          }, {
-            "definition": "সাইটের এইচটিএমএল ভার্সন",
-            "code": "bloginfo('html_type');"
-          }, {
-            "definition": "সাইটের Charset parameter",
-            "code": "bloginfo('charset');"
-          }
-        ]
-      },
-      {
-        "title": "টেমপ্লেট এর জন্য পিএইচপি টুকিটাকি",
-        "items": [
-          {
-            "definition": "পোস্টের বিষয়বস্তু",
-            "code": "the_content();"
-          }, {
-            "definition": "পোস্ট আছে কিনা তা পরীক্ষা করতে",
-            "code": "if(have_posts()):"
-          }, {
-            "definition": "যদি পোস্ট থাকে তাহলে পোস্ট দেখানোর জন্য",
-            "code": "while(have_posts()): the_post();"
-          }, {
-            "definition": "পিএইচপি 'while' ফাংশন বন্ধ করার জন্য",
-            "code": "endwhile;"
-          }, {
-            "definition": "পিএইচপি 'if' ফাংশন বন্ধ করার জন্য",
-            "code": "endif;"
-          }, {
-            "definition": "header.php ফাইল এর কন্টেন্ট",
-            "code": "get_header();"
-          }, {
-            "definition": "sidebar.php ফাইল এর কন্টেন্ট",
-            "code": "get_sidebar();"
-          }, {
-            "definition": "footer.php ফাইল এর কন্টেন্ট",
-            "code": "get_footer();"
-          }, {
-            "definition": "তারিখ '10 - 19 - 07 ' ফরম্যাট",
-            "code": "the_time('m-d-y');"
-          }, {
-            "definition": "পোস্টে মন্তব্যের জন্য লিঙ্ক",
-            "code": "comments_popup_link();"
-          }, {
-            "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার শিরোনাম",
-            "code": "the_title()';"
-          }, {
-            "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার URL",
-            "code": "the_permalink();"
-          }, {
-            "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার ক্যাটাগরি",
-            "code": "the_category();"
-          }, {
-            "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার লেখক",
-            "code": "the_author();"
-          }, {
-            "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার আইডি",
-            "code": "the_ID();"
-          }, {
-            "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠা এডিট করার লিঙ্ক",
-            "code": "edit_post_link();"
-          }, {
-            "definition": "Blogroll এর URL",
-            "code": "get_links_list();"
-          }, {
-            "definition": "comments.php পিএইচপি ফাইল এর কন্টেন্ট",
-            "code": "comments_template();"
-          }, {
-            "definition": "সাইটের পেজ তালিকা",
-            "code": "wp_list_pages();"
-          }, {
-            "definition": "সাইটের ক্যাটাগরি লিস্ট",
-            "code": "wp_list_cats();"
-          }, {
-            "definition": "পরবর্তী পোস্ট এর URL",
-            "code": "next_post_link('%link');"
-          }, {
-            "definition": "পূর্ববর্তী পোস্ট এর URL",
-            "code": "previoust_post_link('%link');"
-          }, {
-            "definition": "Built-in ক্যালেন্ডার",
-            "code": "get_calendar();"
-          }, {
-            "definition": "সাইটের আর্কাইভ লিস্ট",
-            "code": "wp_get_archives();"
-          }, {
-            "definition": "পরবর্তী এবং আগের পোস্ট লিঙ্ক",
-            "code": "posts_nav_link();"
-          }, {
-            "definition": "সাইটের বর্ণনা",
-            "code": "bloginfo('description');"
-          }
-        ]
-      },
-      {
-        "title": "ন্যাভিগেশন মেনু",
-        "items": [
-          {
-            "definition": "ক্যাটাগরি ভিত্তিক ন্যাভিগেশন",
-            "code": "<ul id='menu'>"
-          }, {
-            "definition": " ",
-            "code": "<li <?php if(is_home()) { ?> class='current-cat' <?php } ?> ><a href='<php bloginfo('home'); ?>'>Home</a></li>"
-          },{
-            "definition": " ",
-            "code": "<?php wp_list_categories('title_li=&orderby=id'); ?>"
-          }, {
-            "definition": " ",
-            "code": "</ul>"
-          }, {
-            "definition": "পৃষ্ঠা ভিত্তিক ন্যাভিগেশন",
-            "code": "<ul id='menu'>"
-          }, {
-            "definition": " ",
-            "code": "<li <?php if(is_home()) { ?> class='current_page_item' <?php } >>><a href='<php bloginfo('home'); ?>'>Home</a></li>"
-          }, {
-            "definition": " ",
-            "code": "<?php wp_list_pages('sort_column=menu_order&depth=1&title_li='); ?>"
-          }, {
-            "definition": " ",
-            "code": "</ul>"
-          }
-        ]
-      },
-      {
-        "title": "অতিরিক্ত টুকিটাকি",
-        "items": [
-          {
-            "definition": "কাস্টম পারমালিঙ্ক",
-            "code": "/%postname%/"
-          }, {
-            "definition": "ফাইল include করার জন্য",
-            "code": "include(TEMPATEPATH . '/x');"
-          },{
-            "definition": "অনুসন্ধান ফর্মের জন্য ভ্যালু",
-            "code": "the_search_query();"
-          }, {
-            "definition": "Message প্রিন্ট আউট করার জন্য",
-            "code": "_e('Message');"
-          }, {
-            "definition": "রেজিস্টার লিঙ্ক ডিসপ্লে করার জন্য",
-            "code": "wp_register();"
-          }, {
-            "definition": "লগিন/লগআউট লিঙ্ক ডিসপ্লে করার জন্য",
-            "code": "wp_loginout();"
-          }, {
-            "definition": "পেজে কন্টেন্ট বিভক্ত করার জন্য",
-            "code": "<!--next page-->"
-          }, {
-            "definition": "কন্টেন্ট কাট করতে এবং Read More লিঙ্ক যোগ করতে",
-            "code": "<!--more-->"
-          }, {
-            "definition": "অ্যাডমিন এর জন্য মেটা",
-            "code": "wp_meta();"
-          }, {
-            "definition": "পৃষ্ঠা লোড করার সময়",
-            "code": "timer_stop(1);"
-          }, {
-            "definition": "পৃষ্ঠা লোড করতে Queries",
-            "code": "echo get_num_queries();"
-          }
-        ]
-      },
-      {
-        "title": "লুপ",
-        "items": [
-          {
-            "definition": " ",
-            "code": "<php if(have_posts()): ?>"
-          }, {
-            "definition": " ",
-            "code": "<php while(have_posts()): the_post(); ?>"
-          },{
-            "definition": " ",
-            "code": "// Post content here (Custom HTML & PHP code)"
-          }, {
-            "definition": " ",
-            "code": "<php else; ?>"
-          }, {
-            "definition": " ",
-            "code": "<php endif; ?>"
-          }
-        ]
-      },
-      {
-        "title": "Hooks এবং Filters",
-        "items": [
-          {
-            "definition": "থিম লোড হওয়ার আগে কিছু করতে চাইলে।",
-            "code": "add_action('setup_theme', 'callback_function')"
-          },
-          {
-            "definition": "থিম লোড হওয়ার সাথে সাথে কিছু করতে চাইলে।",
-            "code": "add_action('after_setup_theme', 'callback_function')"
-          },
-          {
-            "definition": "ওয়ার্ডপ্রেস সম্পুর্ণ লোড হওয়ার পরে কিছু করতে চাইলে।",
-            "code": "add_action('wp_loaded', 'callback_function')"
-          }
-        ]
-      }
+    "contents": [{
+            "title": "ওয়ার্ডপ্রেস থিম বেসিক টেমপ্লেট ফাইল",
+            "items": [{
+                    "definition": "স্টাইল শীট ফাইল",
+                    "code": "style.css"
+                },
+                {
+                    "definition": "হোম পেজ ফাইল",
+                    "code": "index.php"
+                },
+                {
+                    "definition": "সিঙ্গেল পোস্ট ফাইল",
+                    "code": "single.php"
+                },
+                {
+                    "definition": "আর্কাইভ বা ক্যাটাগরি ফাইল",
+                    "code": "archive.php"
+                },
+                {
+                    "definition": "সার্চ ফর্ম ফাইল",
+                    "code": "searchform.php"
+                },
+                {
+                    "definition": "কন্টেন্ট সার্চ ফাইল",
+                    "code": "search.php"
+                },
+                {
+                    "definition": "এরর পেজ",
+                    "code": "404.php"
+                },
+                {
+                    "definition": "কমেন্টস টেম্পলেট ফাইল",
+                    "code": "comments.php"
+                },
+                {
+                    "definition": "ফুটার কন্টেন্ট ফাইল",
+                    "code": "footer.php"
+                },
+                {
+                    "definition": "হেডার কন্টেন্ট ফাইল",
+                    "code": "header.php"
+                },
+                {
+                    "definition": "সাইডবার কন্টেন্ট ফাইল",
+                    "code": "sidebar.php"
+                },
+                {
+                    "definition": "সিঙ্গেল পেজ ফাইল",
+                    "code": "page.php"
+                }
+            ]
+        },
+        {
+            "title": "হেডারের জন্য পিএইচপি টুকিটাকি",
+            "items": [{
+                    "definition": "সাইটের শিরোনাম",
+                    "code": "bloginfo('name');"
+                },
+                {
+                    "definition": "নির্দিষ্ট পোস্ট বা পৃষ্ঠার শিরোনাম",
+                    "code": "wp_title();"
+                },
+                {
+                    "definition": "style.css ফাইল এর অবস্থান",
+                    "code": "get_stylesheet_directory_uri();"
+                },
+                {
+                    "definition": "পোস্ট আইডির উপর ভিত্তি করে পোস্টের অবস্থা পুনরুদ্ধার করার জন্য",
+                    "code": "get_post_status();"
+                },
+                {
+                    "definition": "একটি পোস্টের জন্য বিন্যাস স্লাগ পুনরুদ্ধার করার জন্য",
+                    "code": "get_post_format();"
+                },
+                {
+                    "definition": "একটি পোস্টের জন্য বিন্যাস স্লাগ পুনরুদ্ধার করার জন্য",
+                    "code": "get_edit_post_link();"
+                },
+                {
+                    "definition": "পৃষ্ঠাগুলির একটি তালিকার বিন্যাসিত আউটপুট করার জন্য",
+                    "code": "wp_link_pages();"
+                },
+                {
+                    "definition": "একটি ঐচ্ছিক হোম লিঙ্ক সহ পৃষ্ঠাগুলির একটি তালিকা প্রদর্শন বা পুনরুদ্ধার করার জন্য",
+                    "code": "wp_page_menu();"
+                },
+                {
+                    "definition": "ড্রপডাউন হিসাবে পৃষ্ঠাগুলির একটি তালিকা পুনরুদ্ধার বা প্রদর্শন করার জন্য",
+                    "code": "wp_dropdown_pages();"
+                },
+                {
+                    "definition": "সাইটের Pingback URL",
+                    "code": "bloginfo('pingback_url');"
+                },
+                {
+                    "definition": "সাইটের থিম ফাইলের লোকেশন",
+                    "code": "bloginfo('template_url');"
+                },
+                {
+                    "definition": "সাইটের ওয়ার্ডপ্রেস ভার্সন",
+                    "code": "bloginfo('version');"
+                },
+                {
+                    "definition": "সাইটের Atom URL",
+                    "code": "bloginfo('atom_url');"
+                },
+                {
+                    "definition": "সাইটের RSS2 URL",
+                    "code": "bloginfo('rss2_url');"
+                },
+                {
+                    "definition": "সাইটের Exact URL",
+                    "code": "get_site_url();"
+                },
+                {
+                    "definition": "সাইটের নাম",
+                    "code": "bloginfo('name');"
+                },
+                {
+                    "definition": "সাইটের এইচটিএমএল ভার্সন",
+                    "code": "bloginfo('html_type');"
+                },
+                {
+                    "definition": "সাইটের Charset parameter",
+                    "code": "bloginfo('charset');"
+                }
+            ]
+        },
+        {
+            "title": "টেমপ্লেট এর জন্য পিএইচপি টুকিটাকি",
+            "items": [{
+                    "definition": "পোস্টের বিষয়বস্তু",
+                    "code": "the_content();"
+                },
+                {
+                    "definition": "পোস্টের কিছু অংশ রিটার্ন করে রাখে",
+                    "code": "get_the_excerpt();"
+                },
+                {
+                    "definition": "ডাটাবেসে একটি নতুন বিভাগ যোগ করে যদি এটি ইতিমধ্যে বিদ্যমান না থাকে",
+                    "code": "wp_create_category();"
+                },
+                {
+                    "definition": "একটি বিদ্যমান বিভাগ মুছে দেয়ার জন্য",
+                    "code": "wp_delete_category();"
+                },
+                {
+                    "definition": "একটি বিদ্যমান বিভাগ আপডেট করে বা একটি নতুন বিভাগ তৈরি করার জন্য",
+                    "code": "wp_insert_category();"
+                },
+                {
+                    "definition": "সংলগ্ন পোস্ট পুনরুদ্ধার করার জন্য",
+                    "code": "get_adjacent_post();"
+                },
+                {
+                    "definition": "সীমানা পোস্ট উদ্ধার করার জন্য",
+                    "code": "get_boundary_post();"
+                },
+                {
+                    "definition": "বর্তমান পোস্টের সংলগ্ন পরবর্তী পোস্টটি উদ্ধার করার জন্য",
+                    "code": "get_next_post();"
+                },
+                {
+                    "definition": "পরবর্তী পোস্ট পৃষ্ঠা লিঙ্ক পুনরুদ্ধার করার জন্য",
+                    "code": "get_next_posts_link();"
+                },
+                {
+                    "definition": "পোস্টের কিছু অংশ ইকো করে",
+                    "code": "the_excerpt();"
+                },
+                {
+                    "definition": "পোস্টের থাম্বনেইল রিটার্ন করে",
+                    "code": "get_the_post_thumbnail();"
+                },
+                {
+                    "definition": "পোস্ট আছে কিনা তা পরীক্ষা করতে",
+                    "code": "if(have_posts()):"
+                },
+                {
+                    "definition": "যদি পোস্ট থাকে তাহলে পোস্ট দেখানোর জন্য",
+                    "code": "while(have_posts()): the_post();"
+                },
+                {
+                    "definition": "পিএইচপি 'while' ফাংশন বন্ধ করার জন্য",
+                    "code": "endwhile;"
+                },
+                {
+                    "definition": "পিএইচপি 'if' ফাংশন বন্ধ করার জন্য",
+                    "code": "endif;"
+                },
+                {
+                    "definition": "header.php ফাইল এর কন্টেন্ট",
+                    "code": "get_header();"
+                },
+                {
+                    "definition": "sidebar.php ফাইল এর কন্টেন্ট",
+                    "code": "get_sidebar();"
+                },
+                {
+                    "definition": "footer.php ফাইল এর কন্টেন্ট",
+                    "code": "get_footer();"
+                },
+                {
+                    "definition": "তারিখ '10 - 19 - 07 ' ফরম্যাট",
+                    "code": "the_time('m-d-y');"
+                },
+                {
+                    "definition": "পোস্টে মন্তব্যের জন্য লিঙ্ক",
+                    "code": "comments_popup_link();"
+                },
+                {
+                    "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার শিরোনাম",
+                    "code": "the_title()';"
+                },
+                {
+                    "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার URL",
+                    "code": "the_permalink();"
+                },
+                {
+                    "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার ক্যাটাগরি",
+                    "code": "the_category();"
+                },
+                {
+                    "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার লেখক",
+                    "code": "the_author();"
+                },
+                {
+                    "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠার আইডি",
+                    "code": "the_ID();"
+                },
+                {
+                    "definition": "একটি নির্দিষ্ট পোস্ট বা পৃষ্ঠা এডিট করার লিঙ্ক",
+                    "code": "edit_post_link();"
+                },
+                {
+                    "definition": "Blogroll এর URL",
+                    "code": "get_links_list();"
+                },
+                {
+                    "definition": "comments.php পিএইচপি ফাইল এর কন্টেন্ট",
+                    "code": "comments_template();"
+                },
+                {
+                    "definition": "সাইটের পেজ তালিকা",
+                    "code": "wp_list_pages();"
+                },
+                {
+                    "definition": "সাইটের ক্যাটাগরি লিস্ট",
+                    "code": "wp_list_cats();"
+                },
+                {
+                    "definition": "পরবর্তী পোস্ট এর URL",
+                    "code": "next_post_link('%link');"
+                },
+                {
+                    "definition": "পূর্ববর্তী পোস্ট এর URL",
+                    "code": "previoust_post_link('%link');"
+                },
+                {
+                    "definition": "Built-in ক্যালেন্ডার",
+                    "code": "get_calendar();"
+                },
+                {
+                    "definition": "নির্দিষ্ট টেমপ্লেট ফাইল অন্তর্ভুক্ত করতে",
+                    "code": "get_template_part();"
+                },
+                {
+                    "definition": "সাইটের আর্কাইভ লিস্ট",
+                    "code": "wp_get_archives();"
+                },
+                {
+                    "definition": "একটি বিষয়শ্রেণীর একটি তালিকা পুনরুদ্ধার করার জন্য",
+                    "code": "get_categories();"
+                },
+                {
+                    "definition": "একটি ক্যাটাগরি স্লাগ ধারণকারী URL এর উপর ভিত্তি করে একটি বিভাগ পুনরুদ্ধার করার জন্য",
+                    "code": "get_category_by_path();"
+                },
+                {
+                    "definition": "একটি বিভাগ স্লাগ দ্বারা একটি বিভাগ বস্তু পুনরুদ্ধার করার জন্য",
+                    "code": "get_category_by_slug();"
+                },
+                {
+                    "definition": "একটি বিভাগ আইডির উপর ভিত্তি করে বিভাগের নাম পুনরুদ্ধার করার জন্য",
+                    "code": "get_the_category_by_ID();"
+                },
+                {
+                    "definition": "একটি HTML তালিকা বা কাস্টম বিন্যাসে একটি পোস্টের জন্য বিভাগ তালিকা পুনরুদ্ধার করার জন্য",
+                    "code": "get_the_category_list();"
+                },
+                {
+                    "definition": "একটি বিভাজক সহ বিভাগ অভিভাবক পুনরুদ্ধার করার জন্য",
+                    "code": "get_category_parents();"
+                },
+                {
+                    "definition": "একটি পোস্ট বিভাগ পুনরুদ্ধার করার জন্য",
+                    "code": "get_the_category();"
+                },
+                {
+                    "definition": "একটি পোস্ট বা পৃষ্ঠা ট্র্যাশে বা মুছে ফেলে",
+                    "code": "wp_delete_post();"
+                },
+                {
+                    "definition": "একটি পোস্ট সন্নিবেশ বা আপডেট করার জন্য",
+                    "code": "wp_insert_post();"
+                },
+                {
+                    "definition": "পোস্টের স্থিতি পরিবর্তন করে একটি পোস্ট প্রকাশ করার জন্য",
+                    "code": "wp_publish_post();"
+                },
+                {
+                    "definition": "একটি পোস্ট বা পৃষ্ঠা ট্র্যাশে স্থানান্তরিত করার জন্য",
+                    "code": "wp_trash_post();"
+                },
+                {
+                    "definition": "নতুন পোস্ট ডেটা সহ একটি পোস্ট আপডেট করার জন্য",
+                    "code": "wp_update_post();"
+                },
+                {
+                    "definition": "পরবর্তী এবং আগের পোস্ট লিঙ্ক",
+                    "code": "posts_nav_link();"
+                },
+                {
+                    "definition": "সাইটের বর্ণনা",
+                    "code": "bloginfo('description');"
+                }
+            ]
+        },
+        {
+            "title": "ন্যাভিগেশন মেনু",
+            "items": [{
+                    "definition": "ক্যাটাগরি ভিত্তিক ন্যাভিগেশন",
+                    "code": "<ul id='menu'>"
+                },
+                {
+                    "definition": " ",
+                    "code": "<li <?php if(is_home()) { ?> class='current-cat' <?php } ?> ><a href='<php bloginfo('home'); ?>'>Home</a></li>"
+                },
+                {
+                    "definition": " ",
+                    "code": "<?php wp_list_categories('title_li=&orderby=id'); ?>"
+                },
+                {
+                    "definition": " ",
+                    "code": "</ul>"
+                },
+                {
+                    "definition": "পৃষ্ঠা ভিত্তিক ন্যাভিগেশন",
+                    "code": "<ul id='menu'>"
+                },
+                {
+                    "definition": " ",
+                    "code": "<li <?php if(is_home()) { ?> class='current_page_item' <?php } >>><a href='<php bloginfo('home'); ?>'>Home</a></li>"
+                },
+                {
+                    "definition": " ",
+                    "code": "<?php wp_list_pages('sort_column=menu_order&depth=1&title_li='); ?>"
+                },
+                {
+                    "definition": " ",
+                    "code": "</ul>"
+                }
+            ]
+        },
+        {
+            "title": "অতিরিক্ত টুকিটাকি",
+            "items": [{
+                    "definition": "কাস্টম পারমালিঙ্ক",
+                    "code": "/%postname%/"
+                },
+                {
+                    "definition": "ফাইল include করার জন্য",
+                    "code": "include(TEMPATEPATH . '/x');"
+                },
+                {
+                    "definition": "অনুসন্ধান ফর্মের জন্য ভ্যালু",
+                    "code": "the_search_query();"
+                },
+                {
+                    "definition": "Message প্রিন্ট আউট করার জন্য",
+                    "code": "_e('Message');"
+                },
+                {
+                    "definition": "রেজিস্টার লিঙ্ক ডিসপ্লে করার জন্য",
+                    "code": "wp_register();"
+                },
+                {
+                    "definition": "লগিন/লগআউট লিঙ্ক ডিসপ্লে করার জন্য",
+                    "code": "wp_loginout();"
+                },
+                {
+                    "definition": "পেজে কন্টেন্ট বিভক্ত করার জন্য",
+                    "code": "<!--next page-->"
+                },
+                {
+                    "definition": "কন্টেন্ট কাট করতে এবং Read More লিঙ্ক যোগ করতে",
+                    "code": "<!--more-->"
+                },
+                {
+                    "definition": "অ্যাডমিন এর জন্য মেটা",
+                    "code": "wp_meta();"
+                },
+                {
+                    "definition": "পৃষ্ঠা লোড করার সময়",
+                    "code": "timer_stop(1);"
+                },
+                {
+                    "definition": "পৃষ্ঠা লোড করতে Queries",
+                    "code": "echo get_num_queries();"
+                }
+            ]
+        },
+        {
+            "title": "লুপ",
+            "items": [{
+                    "definition": "লুপে উপলব্ধ আরও পোস্ট আছে কিনা তা নির্ধারণ করা",
+                    "code": "<php if(have_posts()): ?>"
+                },
+                {
+                    "definition": "এই লুপ পিএইচপি কে বারবার নেস্টেড স্টেটগুলি কার্যকর করতে বলে, যতক্ষণ না এক্সপ্রেশনটি সত্য হিসাবে মূল্যায়ন করা হয়",
+                    "code": "<php while(have_posts()): the_post(); ?>"
+                },
+                {
+                    "definition": "লুপ কার্যকর করতে কাস্টম এইচটিএমএল এবং পিএইচপি কোড লিখা হবে",
+                    "code": "// Post content here (Custom HTML & PHP code)"
+                },
+                {
+                    "definition": "লুপের একটি শর্ত সত্য হলে কিছু কোড এবং সেই শর্ত মিথ্যা হলে অন্য কোড কার্যকর করে",
+                    "code": "<php else; ?>"
+                },
+                {
+                    "definition": "লুপ শেষ করতে ব্যবহার করা হয়",
+                    "code": "<php endif; ?>"
+                }
+            ]
+        },
+        {
+            "title": "Hooks এবং Filters",
+            "items": [{
+                    "definition": "থিম লোড হওয়ার আগে কিছু করতে চাইলে।",
+                    "code": "add_action('setup_theme', 'callback_function')"
+                },
+                {
+                    "definition": "থিম লোড হওয়ার সাথে সাথে কিছু করতে চাইলে।",
+                    "code": "add_action('after_setup_theme', 'callback_function')"
+                },
+                {
+                    "definition": "ওয়ার্ডপ্রেস সম্পুর্ণ লোড হওয়ার পরে কিছু করতে চাইলে।",
+                    "code": "add_action('wp_loaded', 'callback_function')"
+                },
+                {
+                    "definition": "ওয়ার্ডপ্রেসে ফিল্টার হুক অফার করে যাতে প্লাগইনগুলি রানটাইমে বিভিন্ন ধরনের অভ্যন্তরীণ ডেটা পরিবর্তন করতে পারে।",
+                    "code": "add_filter( 'theme_page_templates', 'makewp_exclude_page_templates' )"
+                }
+            ]
+        }
     ]
-  }
+}

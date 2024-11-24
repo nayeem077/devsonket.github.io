@@ -1,744 +1,832 @@
 {
-  "id": "wordpress-plugin-development",
-  "title": "ওয়ার্ডপ্রেস প্লাগিন ডেভেলপমেন্ট",
-  "slug": "wordpress-plugin-development",
-  "description": "ওয়ার্ডপ্রেস (CMS) এর অন্যতম গুরুত্বপূর্ণ অংশ হচ্ছে ওয়ার্ডপ্রেস-প্লাগিন। এটি ব্যবহারকারিদের কাজের সুবিধার্থে ওয়ার্ডপ্রেসের কোর ফাংশন গুলিকে বর্ধিত করার অনুমতি দেয়।",
-  "colorPref": "#3A241D",
-  "contents": [
-    {
-      "title": "ওয়ার্ডপ্রেস প্লাগিনের বেসিক টেমপ্লেটগুলো ",
-      "items": [
-        {
-          "definition": "প্লাগিন এন্ট্রি ডিরেক্টরি",
-          "code": "plugin name"
+    "id": "wordpress-plugin-development",
+    "title": "ওয়ার্ডপ্রেস প্লাগিন ডেভেলপমেন্ট",
+    "slug": "wordpress-plugin-development",
+    "description": "ওয়ার্ডপ্রেস (CMS) এর অন্যতম গুরুত্বপূর্ণ অংশ হচ্ছে ওয়ার্ডপ্রেস-প্লাগিন। এটি ব্যবহারকারিদের কাজের সুবিধার্থে ওয়ার্ডপ্রেসের কোর ফাংশন গুলিকে বর্ধিত করার অনুমতি দেয়।",
+    "colorPref": "#3A241D",
+    "contents": [{
+            "title": "ওয়ার্ডপ্রেস প্লাগিনের বেসিক টেমপ্লেটগুলো ",
+            "items": [{
+                    "definition": "প্লাগিন এন্ট্রি ডিরেক্টরি",
+                    "code": "plugin name"
+                },
+                {
+                    "definition": "প্লাগিন এন্ট্রি ফাইল",
+                    "code": "plugin-name.php"
+                },
+                {
+                    "definition": "এম্পটি ইনডেক্স ফাইল ",
+                    "code": "index.php"
+                }
+            ]
         },
         {
-          "definition": "প্লাগিন এন্ট্রি ফাইল",
-          "code": "plugin-name.php"
+            "title": "প্লাগিন বেসিক",
+            "items": [{
+                    "definition": "এক্টিভেশন হুক সেটআপ করতে",
+                    "code": "register_activation_hook( __FILE__, 'pluginprefix_function_to_run' )"
+                },
+                {
+                    "definition": "ডিএক্টিভেশন হুক সেটআপ করতে",
+                    "code": "register_deactivation_hook( __FILE__, 'pluginprefix_function_to_run' );"
+                },
+                {
+                    "definition": "আনইনস্টল হুক সেটআপ করতে",
+                    "code": "register_uninstall_hook(__FILE__, 'pluginprefix_function_to_run');"
+                },
+                {
+                    "definition": "এক্সিস্টিং ভ্যারিয়াবলেস চেক করতে",
+                    "code": "isset( $variable ) {} (includes arrays, objects, etc.)"
+                },
+                {
+                    "definition": "এক্সিস্টিং ফাংশনস চেক করতে",
+                    "code": "function_exists()"
+                },
+                {
+                    "definition": "এক্সিস্টিং ক্লাসেস চেক করতে",
+                    "code": "class_exists()"
+                },
+                {
+                    "definition": "এক্সিস্টিং কনস্ট্যান্টস চেক করতে",
+                    "code": "defined()"
+                },
+                {
+                    "definition": "একটি স্ট্রিং এ একটি CSS ক্লাস যোগ করতে",
+                    "code": "add_cssclass)"
+                },
+                {
+                    "definition": "একটি মানকে অ-ঋণাত্মক পূর্ণসংখ্যাতে রূপান্তর করতে",
+                    "code": "absint()"
+                },
+                {
+                    "definition": "একটি স্যান্ডবক্স এ প্লাগইন সক্রিয় করার চেষ্টা করে এবং সাফল্যের উপর পুনঃনির্দেশ করতে",
+                    "code": "activate_plugin()"
+                },
+                {
+                    "definition": "একাধিক প্লাগইন সক্রিয় করতে",
+                    "code": "activate_plugins()"
+                }
+            ]
         },
         {
-          "definition": "এম্পটি ইনডেক্স ফাইল ",
-          "code": "index.php"
+            "title": "এন্ট্রি ফাইল হেডার ফিল্ডগুলো",
+            "items": [{
+                    "definition": "প্লাগিনের নাম (অবশ্যই থাকতে হবে)",
+                    "code": "Plugin Name:"
+                },
+                {
+                    "definition": "প্লাগিনের এড্রেস",
+                    "code": "Plugin URI:"
+                },
+                {
+                    "definition": "সংক্ষিপ্ত বিবরণী",
+                    "code": "Description:"
+                },
+                {
+                    "definition": "প্লাগিনের বর্তমান ভার্সন",
+                    "code": "Version:"
+                },
+                {
+                    "definition": "সর্বনিম্ন ওয়ার্ডপ্রেস ভার্সন",
+                    "code": "Requires at least"
+                },
+                {
+                    "definition": "সাইটের সর্বনিম্ন PHP ভার্সন",
+                    "code": "Requires PHP:"
+                },
+                {
+                    "definition": "প্লাগিন অথোরের নাম",
+                    "code": "Author:"
+                },
+                {
+                    "definition": "প্লাগিন অথোরের এড্রেস",
+                    "code": "Author URI:"
+                },
+                {
+                    "definition": "প্লাগিনের লাইসেন্স নম্বর",
+                    "code": "License:"
+                },
+                {
+                    "definition": "লাইসেন্স এর এড্রেস",
+                    "code": "License URI:"
+                },
+                {
+                    "definition": "টেক্সট ডোমেইন(ইউনিক আইডেন্টিটি) ",
+                    "code": "Text Domain:"
+                },
+                {
+                    "definition": "ট্রান্সলেটেড ল্যাঙ্গুয়েজের পাথ",
+                    "code": "Domain Path:"
+                },
+                {
+                    "definition": "নেটওয়ার্ক এক্টিভেশন",
+                    "code": "Network:"
+                }
+            ]
+        },
+        {
+            "title": "টেমপ্লেটে সবচেয়ে বেশি ব্যবহৃত ট্যাগগুলো",
+            "items": [{
+                    "definition": "পোস্ট টাইটেল",
+                    "code": "<?php the_title(); ?>"
+                },
+                {
+                    "definition": "পোস্ট কন্টেন্টগুলো",
+                    "code": "<?php the_content(); ?>"
+                },
+                {
+                    "definition": "পোস্ট এক্সসার্প্ট ",
+                    "code": "<?php the_excerpt(); ?>"
+                },
+                {
+                    "definition": "পোস্ট ক্যাটাগরি",
+                    "code": "<?php the_category(', ') ?>"
+                },
+                {
+                    "definition": "অথর এর তথ্য ",
+                    "code": "<?php the_author(); ?>"
+                },
+                {
+                    "definition": "নির্দিষ্ট পোস্ট আইডির জন্য",
+                    "code": "<?php the_ID(); ?>"
+                },
+                {
+                    "definition": "পোস্ট এডিট লিংক ",
+                    "code": "<?php edit_post_link(); ?>"
+                },
+                {
+                    "definition": "রেজিস্টার লিংক এর জন্য",
+                    "code": "<?php wp_register(); ?>"
+                },
+                {
+                    "definition": "রেজিস্টার ব্যবহারকারীদের লগঅন/লগ আউট লিংক পেতে ",
+                    "code": "<?php wp_loginout(); ?>"
+                },
+                {
+                    "definition": "পরবর্তী পোস্ট লিংক এর জন্য",
+                    "code": "<?php next_post_link(' %link ') ?>"
+                },
+                {
+                    "definition": "পূর্ববর্তী পোস্ট লিংক এর জন্য",
+                    "code": "<?php previous_post_link('%link') ?>"
+                }
+            ]
+        },
+        {
+            "title": "অ্যাকশন হুক এবং ফিল্টার",
+            "items": [{
+                    "definition": "কোনো অ্যাকশনকে ধরার জন্য ",
+                    "code": "add_action( string $tag, callable $function_to_add, int $priority = 10, int $accepted_args = 1 )"
+                },
+                {
+                    "definition": "নতুন অ্যাকশন তৈরির জন্য",
+                    "code": "do_action( string $tag,  $arg = '' );"
+                },
+                {
+                    "definition": "ফিল্টার অ্যাড করার জন্য",
+                    "code": "add_filter( string $tag, callable $function_to_add, int $priority = 10, int $accepted_args = 1 );"
+                },
+                {
+                    "definition": "ফিল্টার করার জন্য",
+                    "code": "apply_filters( string $tag, mixed $value );"
+                }
+            ]
+        },
+        {
+            "title": "প্লাগিন এবং কনটেন্ট ডিরেক্টরি",
+            "items": [{
+                    "definition": "জাভাস্ক্রিপ্ট, সিএসএস, এবং অন্যান্য বাহ্যিক ফাইল প্লাগিন এ ব্যবহারের কোড",
+                    "code": "plugins_url( 'myscript.js', _FILE_ );"
+                },
+                {
+                    "definition": "plugins_url() ফাংশনটি  প্লাগিন ডিরেক্টরি ইউআরএল রিটার্ন করে",
+                    "code": "plugins_url('img/bar.jpg', __FILE__) || অউটপুট - http://www.example.com/wp-content/my-plugin/img/bar.jpg"
+                },
+                {
+                    "definition": "plugin_dir_url() ফাংশনটি  প্লাগিন ডিরেক্টরি ইউআরএল রিটার্ন করে ইউআরএল এর শেষে / সহ ",
+                    "code": "plugin_dir_url( __FILE__ ) . 'assets/styles.css' ) || অউটপুট http://www.example.com/wp-content/plugins/my-plugin/assets/styles.css"
+                },
+                {
+                    "definition": "ফাংশনটি  প্লাগিন এর ফাইল সিস্টেমের পাথ রিটার্ন করে ইউআরএল এর শেষে / সহ  যদি __FILE__ পাস করা হয়",
+                    "code": "plugin_dir_path()"
+                },
+                {
+                    "definition": "প্লাগিন এর বেসনেম পেতে",
+                    "code": "plugin_basename()"
+                },
+                {
+                    "definition": "থিম ডিরেক্টরি ইউআরআই রিট্রিভ করতে",
+                    "code": "get_template_directory_uri()"
+                },
+                {
+                    "definition": "স্টাইলশীট ডিরেক্টরি ইউআরআই রিট্রিভ করতে",
+                    "code": "get_stylesheet_directory_uri()"
+                },
+                {
+                    "definition": "কারেন্ট থিম এর স্টাইলশীট ডিরেক্টরি ইউআরআই রিট্রিভ করতে",
+                    "code": "get_stylesheet_uri()"
+                },
+                {
+                    "definition": "থিম ডিরেক্টরি জন্য ইউআরআই রিট্রিভ করতে",
+                    "code": "get_theme_root_uri()"
+                },
+                {
+                    "definition": "থিম ডিরেক্টরি জন্য পাথ রিট্রিভ করতে",
+                    "code": "get_theme_root()"
+                },
+                {
+                    "definition": "থিম রুটস্ রিট্রিভ করতে",
+                    "code": "get_theme_roots()"
+                },
+                {
+                    "definition": "কারেন্ট থিম এর স্টাইলশীট ডিরেক্টরি পাথ রিট্রিভ করতে",
+                    "code": "get_stylesheet_directory()"
+                },
+                {
+                    "definition": "কারেন্ট থিম এর থিম ডিরেক্টরি রিট্রিভ করতে",
+                    "code": "get_template_directory()"
+                },
+                {
+                    "definition": "কারেন্ট সাইট এর ফ্রন্ট এন্ড ইউআরএল রিট্রিভ করতে",
+                    "code": "home_url()"
+                },
+                {
+                    "definition": "ওয়ার্ডপ্রেস ইন্সটল এর রুট অ্যাবসুলুট ফাইল সিস্টেমের পাথ পেতে",
+                    "code": "get_home_path() || // Return 'Path: /var/www/htdocs/' or 'Path: /var/www/htdocs/wordpress/' if it is subfolder"
+                },
+                {
+                    "definition": "কারেন্ট সাইট এর এডমিন এরিয়ার ইউআরএল রিট্রিভ করতে",
+                    "code": "admin_url()"
+                },
+                {
+                    "definition": "কারেন্ট সাইট এর ইউআরএল রিট্রিভ করে যেখানে ওয়ার্ডপ্রেস অ্যাপ্লিকেশান এর ফাইল গুলো থাকে",
+                    "code": "site_url()"
+                },
+                {
+                    "definition": "কন্টেন্ট ডিরেক্টরি এর ইউআরএল রিট্রিভ করতে",
+                    "code": "content_url()"
+                },
+                {
+                    "definition": "ইনক্লুড ডিরেক্টরি এর ইউআরএল রিট্রিভ করতে",
+                    "code": "includes_url()"
+                },
+                {
+                    "definition": "কারেন্ট আপলোড ডিরেক্টরি এর পাথ এবং ইউআরএল এর অ্যারে পেতে",
+                    "code": "wp_upload_dir()"
+                },
+                {
+                    "definition": "একটি প্রদত্ত সাইট এর এডমিন এরিয়ার ইউআরএল রিট্রিভ করতে",
+                    "code": "get_admin_url()"
+                },
+                {
+                    "definition": "একটি প্রদত্ত সাইট এর ফ্রন্ট এন্ড ইউআরএল রিট্রিভ করতে",
+                    "code": "get_home_url()"
+                },
+                {
+                    "definition": "একটি প্রদত্ত সাইট এর ইউআরএল রিট্রিভ করে যেখানে ওয়ার্ডপ্রেস অ্যাপ্লিকেশান এর ফাইল গুলো থাকে",
+                    "code": "get_site_url()"
+                },
+                {
+                    "definition": "নেটওয়ার্ক এনাবেল সাইট এর এডমিন এরিয়ার ইউআরএল রিট্রিভ করতে",
+                    "code": "network_admin_url()"
+                },
+                {
+                    "definition": "কারেন্ট নেটওয়ার্ক এর সাইট ইউআরএল রিট্রিভ করতে",
+                    "code": "network_site_url()"
+                },
+                {
+                    "definition": "কারেন্ট নেটওয়ার্ক এর হোম ইউআরএল রিট্রিভ করতে",
+                    "code": "network_home_url()"
+                }
+            ]
+        },
+        {
+            "title": "প্লাগইন সিকিউরিটি (ইউসার রোলেস)",
+            "items": [
+                {
+                    "definition": "নতুন ইউসার রোল তৈরির জন্য",
+                    "code": "add_role( string $role, string $display_name, array $capabilities = array() )"
+                },
+                {
+                    "definition": "একটি ইউসার রোল সরানোর জন্য",
+                    "code": "remove_role( string $role )"
+                },
+                {
+                    "definition": "একটি রোলের তথ্য পেতে",
+                    "code": "get_role( string $role )"
+                },
+                {
+                    "definition": "কোনো রোলের জন্য নতুন ক্যাপাবিলিটি যোগ করার জন্য",
+                    "code": "add_cap( string $role, string $cap, bool $grant = true )"
+                }
+            ]
+        },
+        {
+            "title": "প্লাগইন সিকিউরিটি (ইউসার রোলেস)",
+            "items": [
+                {
+                    "code": "add_role()",
+                    "definition": "ইউসার রোল যোগ করুন"
+                },
+                {
+                    "code": "remove_role()",
+                    "definition": "ইউসার রোল বাদ দিন"
+                },
+                {
+                    "code": "get_role()",
+                    "definition": ""
+                },
+                {
+                    "code": "add_cap()"
+                },
+                {
+                    "code": "remove_cap()"
+                },
+                {
+                    "code": "user_can()"
+                },
+                {
+                    "code": "current_user_can()",
+                    "definition": "বর্তমান ইউসার করতে পারে"
+                },
+                {
+                    "definition": "একটি রোল থেকে ক্যাপাবিলিটি সরানোর জন্য",
+                    "code": "remove_cap( string $role, string $cap )"
+                },
+                {
+                    "definition": "নির্দিষ্ট একজন ইউসার কোনো কাজ করতে পারবে কিনা তা যাচাইয়ের জন্য",
+                    "code": "user_can( WP_User $user, string $capability )"
+                },
+                {
+                    "definition": "বর্তমান ইউসার কোনো নির্দিষ্ট কাজ করতে পারে কিনা যাচাইয়ের জন্য",
+                    "code": "current_user_can( string $capability )"
+                }
+            ]
+        },
+        {
+            "title": "প্লাগইন সিকিউরিটি (ভ্যালিডেশন)",
+            "items": [{
+                    "definition": "Array/ Object এ কোন key সেট করা আছে কিনা চেক করতে",
+                    "code": "isset()"
+                },
+                {
+                    "definition": "Array/ Object/ String খালি কিনা চেক করতে। এটা isset() এর কাজ ও করে।",
+                    "code": "empty()"
+                },
+                {
+                    "definition": "String এ কত গুলো char আছে জানতে",
+                    "code": "mb_strlen() or strlen()"
+                },
+                {
+                    "definition": "রেগুলার এক্সপ্রেশন দিয়ে কোন String থেকে Sub String বের করতে",
+                    "code": "preg_match()"
+                },
+                {
+                    "definition": "একটা String থেকে অন্য Sub String এর পজিশন বের করতে",
+                    "code": "strpos()"
+                },
+                {
+                    "definition": "Array তে কত গুলো এলিমেন্ট আছে জানতে",
+                    "code": "count()"
+                },
+                {
+                    "definition": "Array কিনা জানতে",
+                    "code": "in_array()"
+                },
+                {
+                     "definition": "একটি স্ট্রিং সঠিক ইমেইল ফরম্যাটে আছে কি না তা যাচাই করতে ব্যবহৃত হয়",
+                    "code": "is_email()"
+                },
+                {
+                     "definition": "ট্যাক্সোনমি বা ক্যাটাগরির মধ্যে কোনো টার্ম (term) বিদ্যমান আছে কি না তা যাচাই করার জন্য ব্যবহৃত হয়",
+                    "code": "term_exists()"
+                },
+                {
+                     "definition": "একটি নির্দিষ্ট ইউজারনেম (username) সিস্টেমে বিদ্যমান আছে কি না তা যাচাই করার জন্য ব্যবহৃত হয়",
+                    "code": "username_exists()"
+                },
+                {
+                     "definition": "কোনো ফাইলের পাথ বা নাম পরীক্ষা করার জন্য ব্যবহৃত হয়, যাতে নিশ্চিত করা যায় যে এটি সঠিক এবং নিরাপদ ফাইল পাথ হিসেবে ব্যবহার করা যাচ্ছে কিনা",
+                    "code": "validate_file()"
+                }
+            ]
+        },
+        {
+    "title": "প্লাগইন সিকিউরিটি (সিকিউরিং ইনপুট)",
+    "items": [
+        {
+            "definition": "ইমেইল ঠিকানা স্যানিটাইজ করার জন্য",
+            "code": "sanitize_email( string $email )"
+        },
+        {
+            "definition": "ফাইলের নাম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_file_name( string $filename )"
+        },
+        {
+            "definition": "হেক্সাডেসিমাল রঙ স্যানিটাইজ করার জন্য (হ্যাশসহ)",
+            "code": "sanitize_hex_color( string $color )"
+        },
+        {
+            "definition": "হেক্সাডেসিমাল রঙ স্যানিটাইজ করার জন্য (হ্যাশ ছাড়া)",
+            "code": "sanitize_hex_color_no_hash( string $color )"
+        },
+        {
+            "definition": "HTML ক্লাস স্যানিটাইজ করার জন্য",
+            "code": "sanitize_html_class( string $class, string $fallback = '' )"
+        },
+        {
+            "definition": "কী স্যানিটাইজ করার জন্য",
+            "code": "sanitize_key( string $key )"
+        },
+        {
+            "definition": "মেটা ডেটা স্যানিটাইজ করার জন্য",
+            "code": "sanitize_meta( string $meta_key, mixed $meta_value, string $object_type, string $object_subtype )"
+        },
+        {
+            "definition": "মাইম টাইপ স্যানিটাইজ করার জন্য",
+            "code": "sanitize_mime_type( string $mime_type )"
+        },
+        {
+            "definition": "অপশন ভ্যালু স্যানিটাইজ করার জন্য",
+            "code": "sanitize_option( string $option, string $value )"
+        },
+        {
+            "definition": "SQL ORDER BY ক্লজ স্যানিটাইজ করার জন্য",
+            "code": "sanitize_sql_orderby( string $orderby_clause )"
+        },
+        {
+            "definition": "টেক্সট ফিল্ড স্যানিটাইজ করার জন্য",
+            "code": "sanitize_text_field( string $str )"
+        },
+        {
+            "definition": "শিরোনাম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_title( string $title, string $fallback_title = '', string $context = 'save' )"
+        },
+        {
+            "definition": "কোয়েরির জন্য শিরোনাম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_title_for_query( string $title )"
+        },
+        {
+            "definition": "ড্যাশসহ শিরোনাম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_title_with_dashes( string $title, string $raw_title = '', string $context = 'save' )"
+        },
+        {
+            "definition": "ইউসারনেম স্যানিটাইজ করার জন্য",
+            "code": "sanitize_user( string $username, bool $strict = false )"
+        },
+        {
+            "definition": "ইউআরএল স্যানিটাইজ করার জন্য (রো ইউআরএলকে সিকিউর করার জন্য)",
+            "code": "esc_url_raw( string $url, array $protocols = null )"
+        },
+        {
+            "definition": "HTML ফিল্টার করার জন্য পোস্ট কন্টেন্ট স্যানিটাইজ করে",
+            "code": "wp_filter_post_kses( string $data )"
+        },
+        {
+            "definition": "HTML ব্যতীত কন্টেন্ট স্যানিটাইজ করার জন্য",
+            "code": "wp_filter_nohtml_kses( string $data )"
         }
-      ]
-    },
-    {
-      "title": "প্লাগিন বেসিক",
-      "items": [
+    ]
+},
         {
-          "definition": "এক্টিভেশন হুক সেটআপ করতে",
-          "code": "register_activation_hook( __FILE__, 'pluginprefix_function_to_run' )"
-        }, 
+            "title": "প্লাগইন সিকিউরিটি (সিকিউরিং আউটপুট)",
+            "items": [{
+                    "code": "esc_html()"
+                },
+                {
+                    "code": "esc_url()"
+                },
+                {
+                    "code": "esc_js()"
+                },
+                {
+                    "code": "esc_attr()"
+                },
+                {
+                    "code": "esc_html__()"
+                },
+                {
+                    "code": "esc_html_e()"
+                },
+                {
+                    "code": "esc_html_x()"
+                },
+                {
+                    "code": "esc_attr__()"
+                },
+                {
+                    "code": "esc_attr_e()"
+                },
+                {
+                    "code": "esc_attr_x()"
+                }
+            ]
+        },
         {
-          "definition": "ডিএক্টিভেশন হুক সেটআপ করতে",
-          "code": "register_deactivation_hook( __FILE__, 'pluginprefix_function_to_run' );"
-        }, 
+            "title": "অ্যাডমিনিস্ট্রেশন মেনু",
+            "items": [{
+                    "code": "add_menu_page()",
+                    "definition": "এডমিন ড্যাশবোর্ডে মেনু যুক্ত করুন"
+                },
+                {
+                    "code": "add_submenu_page()",
+                    "definition": "এডমিন ড্যাশবোর্ডে সাবমেনু যুক্ত করুন"
+                },
+                {
+                    "code": "add_dashboard_page() – index.php"
+                },
+                {
+                    "code": "add_posts_page() – edit.php"
+                },
+                {
+                    "code": "add_media_page() – upload.php"
+                },
+                {
+                    "code": "add_pages_page() – edit.php?post_type=page"
+                },
+                {
+                    "code": "add_comments_page() – edit-comments.php"
+                },
+                {
+                    "code": "add_theme_page() – themes.php"
+                },
+                {
+                    "code": "add_plugins_page() – plugins.php"
+                },
+                {
+                    "code": "add_users_page() – users.php"
+                },
+                {
+                    "code": "add_management_page() – tools.php"
+                },
+                {
+                    "code": "add_options_page() – options-general.php"
+                },
+                {
+                    "code": "add_options_page() – settings.php"
+                },
+                {
+                    "code": "add_links_page() – link-manager.php – requires a plugin since WP 3.5+"
+                },
+                {
+                    "code": "Custom Post Type – edit.php?post_type=wporg_post_type"
+                },
+                {
+                    "code": "Network Admin – settings.php"
+                }
+            ]
+        },
         {
-          "definition": "আনইনস্টল হুক সেটআপ করতে",
-          "code": "register_uninstall_hook(__FILE__, 'pluginprefix_function_to_run');"
-        }, 
+            "title": "শর্টকোড",
+            "items": [{
+                    "code": "[caption]"
+                },
+                {
+                    "code": "[gallery]"
+                },
+                {
+                    "code": "[audio]"
+                },
+                {
+                    "code": "[video]"
+                },
+                {
+                    "code": "[playlist]"
+                },
+                {
+                    "code": "[embed]"
+                },
+                {
+                    "code": "add_shortcode()",
+                    "definition": "শর্টকোড যুক্ত করুন"
+                },
+                {
+                    "code": "remove_shortcode()",
+                    "definition": "শর্টকোড মুছে ফেলুন"
+                },
+                {
+                    "code": "shortcode_exists()",
+                    "definition": "শর্টকোড আছে কি নাহ সেটা দেখুন"
+                }
+            ]
+        },
         {
-          "definition": "এক্সিস্টিং ভ্যারিয়াবলেস চেক করতে",
-          "code": "isset() (includes arrays, objects, etc.)"
-        }, 
+            "title": "সেটিংস",
+            "items": [{
+                    "code": "register_setting()",
+                    "definition": "রেজিস্টার সেটিং"
+                },
+                {
+                    "code": "unregister_setting()"
+                },
+                {
+                    "code": "add_settings_section()"
+                },
+                {
+                    "code": "add_settings_field()"
+                },
+                {
+                    "code": "settings_fields()"
+                },
+                {
+                    "code": "do_settings_sections()"
+                },
+                {
+                    "code": "do_settings_fields()"
+                },
+                {
+                    "code": "add_settings_error()"
+                },
+                {
+                    "code": "get_settings_errors()",
+                    "definition": "সেটিং এর এরর চেক দেখতে"
+                },
+                {
+                    "code": "settings_errors()",
+                    "definition": "সেটিং এর এরর চেক করতে"
+                },
+                {
+                    "code": "add_option()",
+                    "definition": "wp_options টেবিলে কিছু সংযুক্ত করা"
+                },
+                {
+                    "code": "get_option()",
+                    "definition": "wp_options টেবিল থেকে কিছু দেখার জন্য ব্যবহার হয়"
+                },
+                {
+                    "code": "update_option()",
+                    "definition": "wp_options টেবিলে কোনো ভ্যালু আপডেট করতে ব্যবহার হয়"
+                },
+                {
+                    "code": "delete_option()",
+                    "definition": "wp_options টেবিলে কোনো ভ্যালু ডিলিট করতে ব্যবহার হয়"
+                },
+                {
+                    "code": "add_site_option()"
+                },
+                {
+                    "code": "get_site_option()"
+                },
+                {
+                    "code": "update_site_option()"
+                },
+                {
+                    "code": "delete_site_option()"
+                }
+            ]
+        },
         {
-          "definition": "এক্সিস্টিং ফাংশনস চেক করতে",
-          "code": "function_exists()"
-        }, 
+            "title": "মেটাডাটা",
+            "items": [{
+                    "code": "add_post_meta( int $post_id, string $meta_key, mixed $meta_value, bool $unique = false )"
+                },
+                {
+                    "code": "delete_post_meta( int $post_id, string $meta_key, mixed $meta_value = '' )"
+                },
+                {
+                    "code": "update_post_meta( int $post_id, string $meta_key, mixed $meta_value, mixed $prev_value = '' )"
+                },
+                {
+                    "code": "add_meta_box( string $id, string $title, callable $callback, string|array|WP_Screen $screen = null, string $context = 'advanced', string $priority = 'default', array $callback_args = null )"
+                }
+            ]
+        },
         {
-          "definition": "এক্সিস্টিং ক্লাসেস চেক করতে",
-          "code": "class_exists()"
-        }, 
+            "title": "কাস্টম পোস্ট টাইপ & ট্যাক্সোনমি",
+            "items": [{
+                    "code": "register_post_type( string $post_type, array|string $args = array() )",
+                    "definition": "নতুন পোস্টটাইপ তৈরির জন্য ব্যবহার করা হয়"
+                },
+                {
+                    "code": "single-{post_type}.php",
+                    "definition": "একক কোনো পোস্টটাইপ এর সিঙ্গেল পেইজ করার জন্য"
+                },
+                {
+                    "code": "archive-{post_type}.php",
+                    "definition": "একক কোনো পোস্টটাইপ এর আর্কাইভ পেইজ করার জন্য"
+                },
+                {
+                    "code": "register_taxonomy( string $taxonomy, array|string $object_type, array|string $args = array() )",
+                    "definition": "একক কোনো পোস্টটাইপে ক্যাটেগরি এড করার জন্য ব্যবহার করা হয়"
+                }
+            ]
+        },
         {
-          "definition": "এক্সিস্টিং কনস্ট্যান্টস চেক করতে",
-          "code": "defined()"
+            "title": "ইউসার",
+            "items": [{
+                    "code": "wp_create_user( string $username, string $password, string $email = '' )"
+                },
+                {
+                    "code": "wp_insert_user( array|object|WP_User $userdata )"
+                },
+                {
+                    "code": "update_user_meta( int $user_id, string $meta_key, mixed $meta_value, mixed $prev_value = '' )"
+                },
+                {
+                    "code": "wp_delete_user( int $id, int $reassign = null )"
+                }
+            ]
+        },
+        {
+            "title": "অনুবাদ",
+            "items": [{
+                    "code": "__()"
+                },
+                {
+                    "code": "_e()"
+                },
+                {
+                    "code": "_x()"
+                },
+                {
+                    "code": "_ex()"
+                },
+                {
+                    "code": "_n()"
+                },
+                {
+                    "code": "_nx()"
+                },
+                {
+                    "code": "_n_noop()"
+                },
+                {
+                    "code": "_nx_noop()"
+                },
+                {
+                    "code": "translate_nooped_plural()"
+                },
+                {
+                    "code": "esc_html__()"
+                },
+                {
+                    "code": "esc_html_e()"
+                },
+                {
+                    "code": "esc_html_x()"
+                },
+                {
+                    "code": "esc_attr__()"
+                },
+                {
+                    "code": "esc_attr_e()"
+                },
+                {
+                    "code": "esc_attr_x()"
+                },
+                {
+                    "code": "number_format_i18n()",
+                    "definition": "আন্তর্জাতিক নাম্বার ফরমেট"
+                },
+                {
+                    "code": "date_i18n()",
+                    "definition": "তারিখকে আন্তর্জাতিক করার জন্য"
+                }
+            ]
+        },
+        {
+            "title": "ডেভেলপার টুলস",
+            "items": [{
+                    "definition": "WordPress Plugin Boilerplate",
+                    "code": "https://github.com/devinvinson/WordPress-Plugin-Boilerplate/"
+                },
+                {
+                    "code": "https://wordpress.org/plugins/query-monitor/"
+                },
+                {
+                    "code": "https://wordpress.org/plugins/debug-bar/"
+                },
+                {
+                    "code": "https://wordpress.org/plugins/debug-bar-console/"
+                },
+                {
+                    "code": "https://wordpress.org/plugins/debug-bar-shortcodes/"
+                },
+                {
+                    "code": "https://wordpress.org/plugins/debug-bar-constants/"
+                },
+                {
+                    "code": "https://wordpress.org/plugins/debug-bar-post-types/"
+                },
+                {
+                    "code": "https://wordpress.org/plugins/debug-bar-cron/"
+                },
+                {
+                    "code": "https://wordpress.org/plugins/debug-bar-actions-and-filters-addon/"
+                },
+                {
+                    "definition": "Plugin Readme Generator",
+                    "code": "https://generatewp.com/plugin-readme/"
+                },
+                {
+                    "definition": "Readme Validator",
+                    "code": "https://wordpress.org/plugins/developers/readme-validator/"
+                },
+                {
+                    "definition": "Fake Post Generator",
+                    "code": "https://wordpress.org/plugins/fakerpress/"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "title": "এন্ট্রি ফাইল হেডার ফিল্ডগুলো",
-      "items": [
-        {
-          "definition": "প্লাগিনের নাম (অবশ্যই থাকতে হবে)",
-          "code": "Plugin Name:"
-        },
-        {
-          "definition": "প্লাগিনের এড্রেস",
-          "code": "Plugin URI:"
-        },
-        {
-          "definition": "সংক্ষিপ্ত বিবরণী",
-          "code": "Description:"
-        },
-        {
-          "definition": "প্লাগিনের বর্তমান ভার্সন",
-          "code": "Version:"
-        },
-        {
-          "definition": "সর্বনিম্ন ওয়ার্ডপ্রেস ভার্সন",
-          "code": "Requires at least"
-        },
-        {
-          "definition": "সাইটের সর্বনিম্ন PHP ভার্সন",
-          "code": "Requires PHP:"
-        },
-        {
-          "definition": "প্লাগিন অথোরের নাম",
-          "code": "Author:"
-        },
-        {
-          "definition": "প্লাগিন অথোরের এড্রেস",
-          "code": "Author URI:"
-        },
-        {
-          "definition": "প্লাগিনের লাইসেন্স নম্বর",
-          "code": "License:"
-        },
-        {
-          "definition": "লাইসেন্স এর এড্রেস",
-          "code": "License URI:"
-        },
-        {
-          "definition": "টেক্সট ডোমেইন(ইউনিক আইডেন্টিটি) ",
-          "code": "Text Domain:"
-        },
-        {
-          "definition": "ট্রান্সলেটেড ল্যাঙ্গুয়েজের পাথ",
-          "code": "Domain Path:"
-        },
-        {
-          "definition": "নেটওয়ার্ক এক্টিভেশন",
-          "code": "Network:"
-        }
-      ]
-    },
-    {
-      "title": "টেমপ্লেটে সবচেয়ে বেশি ব্যবহৃত ট্যাগগুলো",
-      "items": [
-        {
-          "definition": "পোস্ট টাইটেল",
-          "code": "<?php the_title(); ?>"
-        },
-        {
-          "definition": "পোস্ট কন্টেন্টগুলো",
-          "code": "<?php the_content(); ?>"
-        },
-        {
-          "definition": "পোস্ট এক্সসার্প্ট ",
-          "code": "<?php the_excerpt(); ?>"
-        },
-        {
-          "definition": "পোস্ট ক্যাটাগরি",
-          "code": "<?php the_category(', ') ?>"
-        },
-        {
-          "definition": "অথর এর তথ্য ",
-          "code": "<?php the_author(); ?>"
-        },
-        {
-          "definition": "নির্দিষ্ট পোস্ট আইডির জন্য",
-          "code": "<?php the_ID(); ?>"
-        },
-        {
-          "definition": "পোস্ট এডিট লিংক ",
-          "code": "<?php edit_post_link(); ?>"
-        },
-        {
-          "definition": "রেজিস্টার লিংক এর জন্য",
-          "code": "<?php wp_register(); ?>"
-        },
-        {
-          "definition": "রেজিস্টার ব্যবহারকারীদের লগঅন/লগ আউট লিংক পেতে ",
-          "code": "<?php wp_loginout(); ?>"
-        },
-        {
-          "definition": "পরবর্তী পোস্ট লিংক এর জন্য",
-          "code": "<?php next_post_link(' %link ') ?>"
-        },
-        {
-          "definition": "পূর্ববর্তী পোস্ট লিংক এর জন্য",
-          "code": "<?php previous_post_link('%link') ?>"
-        }
-      ]
-    },
-    {
-      "title": "অ্যাকশন হুক এবং ফিল্টার",
-      "items": [
-        {
-          "definition": "কোনো অ্যাকশনকে ধরার জন্য ",
-          "code": "add_action( string $tag, callable $function_to_add, int $priority = 10, int $accepted_args = 1 )"
-        },
-        {
-          "definition": "নতুন অ্যাকশন তৈরির জন্য",
-          "code": "do_action( string $tag,  $arg = '' );"
-        },
-        {
-          "definition": "ফিল্টার অ্যাড করার জন্য",
-          "code": "add_filter( string $tag, callable $function_to_add, int $priority = 10, int $accepted_args = 1 );"
-        },
-        {
-          "definition": "ফিল্টার করার জন্য",
-          "code": "apply_filters( string $tag, mixed $value );"
-        }
-      ]
-    },
-    {
-      "title": "প্লাগিন এবং কনটেন্ট ডিরেক্টরি",
-      "items": [
-        {
-          "definition": "জাভাস্ক্রিপ্ট, সিএসএস, এবং অন্যান্য বাহ্যিক ফাইল প্লাগিন এ ব্যবহারের কোড",
-          "code": "plugins_url( 'myscript.js', _FILE_ );"
-        },
-        {
-          "definition": "plugins_url() ফাংশনটি  প্লাগিন ডিরেক্টরি ইউআরএল রিটার্ন করে",
-          "code": "plugins_url('img/bar.jpg', __FILE__) || অউটপুট - http://www.example.com/wp-content/my-plugin/img/bar.jpg"
-        },
-        {
-          "definition": "plugin_dir_url() ফাংশনটি  প্লাগিন ডিরেক্টরি ইউআরএল রিটার্ন করে ইউআরএল এর শেষে / সহ ",
-          "code": "plugin_dir_url( __FILE__ ) . 'assets/styles.css' ) || অউটপুট http://www.example.com/wp-content/plugins/my-plugin/assets/styles.css"
-        },
-        {
-          "definition": "ফাংশনটি  প্লাগিন এর ফাইল সিস্টেমের পাথ রিটার্ন করে ইউআরএল এর শেষে / সহ  যদি __FILE__ পাস করা হয়",
-          "code": "plugin_dir_path()"
-        },
-        {
-          "definition": "প্লাগিন এর বেসনেম পেতে",
-          "code": "plugin_basename()"
-        },
-        {
-          "definition": "থিম ডিরেক্টরি ইউআরআই রিট্রিভ করতে",
-          "code": "get_template_directory_uri()"
-        },
-        {
-          "definition": "স্টাইলশীট ডিরেক্টরি ইউআরআই রিট্রিভ করতে",
-          "code": "get_stylesheet_directory_uri()"
-        },
-        {
-          "definition": "কারেন্ট থিম এর স্টাইলশীট ডিরেক্টরি ইউআরআই রিট্রিভ করতে",
-          "code": "get_stylesheet_uri()"
-        },
-        {
-          "definition": "থিম ডিরেক্টরি জন্য ইউআরআই রিট্রিভ করতে",
-          "code": "get_theme_root_uri()"
-        },
-        {
-          "definition": "থিম ডিরেক্টরি জন্য পাথ রিট্রিভ করতে",
-          "code": "get_theme_root()"
-        },
-        {
-          "definition": "থিম রুটস্ রিট্রিভ করতে",
-          "code": "get_theme_roots()"
-        },
-        {
-          "definition": "কারেন্ট থিম এর স্টাইলশীট ডিরেক্টরি পাথ রিট্রিভ করতে",
-          "code": "get_stylesheet_directory()"
-        },
-        {
-          "definition": "কারেন্ট থিম এর থিম ডিরেক্টরি রিট্রিভ করতে",
-          "code": "get_template_directory()"
-        },
-        {
-          "definition": "কারেন্ট সাইট এর ফ্রন্ট এন্ড ইউআরএল রিট্রিভ করতে",
-          "code": "home_url()"
-        },
-        {
-          "definition": "ওয়ার্ডপ্রেস ইন্সটল এর রুট অ্যাবসুলুট ফাইল সিস্টেমের পাথ পেতে",
-          "code": "get_home_path() || // Return 'Path: /var/www/htdocs/' or 'Path: /var/www/htdocs/wordpress/' if it is subfolder"
-        },
-        {
-          "definition": "কারেন্ট সাইট এর এডমিন এরিয়ার ইউআরএল রিট্রিভ করতে",
-          "code": "admin_url()"
-        },
-        {
-          "definition": "কারেন্ট সাইট এর ইউআরএল রিট্রিভ করে যেখানে ওয়ার্ডপ্রেস অ্যাপ্লিকেশান এর ফাইল গুলো থাকে",
-          "code": "site_url()"
-        },
-        {
-          "definition": "কন্টেন্ট ডিরেক্টরি এর ইউআরএল রিট্রিভ করতে",
-          "code": "content_url()"
-        },
-        {
-          "definition": "ইনক্লুড ডিরেক্টরি এর ইউআরএল রিট্রিভ করতে",
-          "code": "includes_url()"
-        },
-        {
-          "definition": "কারেন্ট আপলোড ডিরেক্টরি এর পাথ এবং ইউআরএল এর অ্যারে পেতে",
-          "code": "wp_upload_dir()"
-        },
-        {
-          "definition": "একটি প্রদত্ত সাইট এর এডমিন এরিয়ার ইউআরএল রিট্রিভ করতে",
-          "code": "get_admin_url()"
-        },
-        {
-          "definition": "একটি প্রদত্ত সাইট এর ফ্রন্ট এন্ড ইউআরএল রিট্রিভ করতে",
-          "code": "get_home_url()"
-        },
-        {
-          "definition": "একটি প্রদত্ত সাইট এর ইউআরএল রিট্রিভ করে যেখানে ওয়ার্ডপ্রেস অ্যাপ্লিকেশান এর ফাইল গুলো থাকে",
-          "code": "get_site_url()"
-        },
-        {
-          "definition": "নেটওয়ার্ক এনাবেল সাইট এর এডমিন এরিয়ার ইউআরএল রিট্রিভ করতে",
-          "code": "network_admin_url()"
-        },
-        {
-          "definition": "কারেন্ট নেটওয়ার্ক এর সাইট ইউআরএল রিট্রিভ করতে",
-          "code": "network_site_url()"
-        },
-        {
-          "definition": "কারেন্ট নেটওয়ার্ক এর হোম ইউআরএল রিট্রিভ করতে",
-          "code": "network_home_url()"
-        }
-      ]
-    },
-    {
-      "title": "প্লাগইন সিকিউরিটি (ইউসার রোলেস)",
-      "items": [
-        {
-          "code": "add_role()"
-        },
-        {
-          "code": "remove_role()"
-        },
-        {
-          "code": "get_role()"
-        },
-        {
-          "code": "add_cap()"
-        },
-        {
-          "code": "remove_cap()"
-        },
-        {
-          "code": "user_can()"
-        },
-        {
-          "code": "current_user_can()"
-        }
-      ]
-    },
-    {
-      "title": "প্লাগইন সিকিউরিটি (ভ্যালিডেশন)",
-      "items": [
-        {
-          "definition": "Array/ Object এ কোন key সেট করা আছে কিনা চেক করতে",
-          "code": "isset()"
-        },
-        {
-          "definition": "Array/ Object/ String খালি কিনা চেক করতে। এটা isset() এর কাজ ও করে।",
-          "code": "empty()"
-        },
-        {
-          "definition": "String এ কত গুলো char আছে জানতে",
-          "code": "mb_strlen() or strlen()"
-        },
-        {
-          "definition": "রেগুলার এক্সপ্রেশন দিয়ে কোন String থেকে Sub String বের করতে",
-          "code": "preg_match()"
-        },
-         {
-          "definition": "একটা String থেকে অন্য Sub String এর পজিশন বের করতে", 
-          "code": "strpos()"
-        },
-        {
-          "definition": "Array তে কত গুলো এলিমেন্ট আছে জানতে",
-          "code": "count()"
-        },
-        {
-          "definition": "Array কিনা জানতে",
-          "code": "in_array()"
-        },
-        {
-          "code": "is_email()"
-        },
-        {
-          "code": "term_exists()"
-        },
-        {
-          "code": "username_exists()"
-        },
-        {
-          "code": "validate_file()"
-        }
-      ]
-    },
-    {
-      "title": "প্লাগইন সিকিউরিটি (সিকিউরিং ইনপুট)",
-      "items": [
-        {
-          "code": "sanitize_email()"
-        },
-        {
-          "code": "sanitize_file_name()"
-        },
-        {
-          "code": "sanitize_hex_color()"
-        },
-        {
-          "code": "sanitize_hex_color_no_hash()"
-        },
-        {
-          "code": "sanitize_html_class()"
-        },
-        {
-          "code": "sanitize_key()"
-        },
-        {
-          "code": "sanitize_meta()"
-        },
-        {
-          "code": "sanitize_mime_type()"
-        },
-        {
-          "code": "sanitize_option()"
-        },
-        {
-          "code": "sanitize_sql_orderby()"
-        },
-        {
-          "code": "sanitize_text_field()"
-        },
-        {
-          "code": "sanitize_title()"
-        },
-        {
-          "code": "sanitize_title_for_query()"
-        },
-        {
-          "code": "sanitize_title_with_dashes()"
-        },
-        {
-          "code": "sanitize_user()"
-        },
-        {
-          "code": "esc_url_raw()"
-        },
-        {
-          "code": "wp_filter_post_kses()"
-        },
-        {
-          "code": "wp_filter_nohtml_kses()"
-        }
-      ]
-    },
-    {
-      "title": "প্লাগইন সিকিউরিটি (সিকিউরিং আউটপুট)",
-      "items": [
-        {
-          "code": "esc_html()"
-        },
-        {
-          "code": "esc_url()"
-        },
-        {
-          "code": "esc_js()"
-        },
-        {
-          "code": "esc_attr()"
-        },
-        {
-          "code": "esc_html__()"
-        },
-        {
-          "code": "esc_html_e()"
-        },
-        {
-          "code": "esc_html_x()"
-        },
-        {
-          "code": "esc_attr__()"
-        },
-        {
-          "code": "esc_attr_e()"
-        },
-        {
-          "code": "esc_attr_x()"
-        }
-      ]
-    },
-    {
-      "title": "অ্যাডমিনিস্ট্রেশন মেনু",
-      "items": [
-        {
-          "code": "add_menu_page()"
-        },
-        {
-          "code": "add_submenu_page()"
-        },
-        {
-          "code": "add_dashboard_page() – index.php"
-        },
-        {
-          "code": "add_posts_page() – edit.php"
-        },
-        {
-          "code": "add_media_page() – upload.php"
-        },
-        {
-          "code": "add_pages_page() – edit.php?post_type=page"
-        },
-        {
-          "code": "add_comments_page() – edit-comments.php"
-        },
-        {
-          "code": "add_theme_page() – themes.php"
-        },
-        {
-          "code": "add_plugins_page() – plugins.php"
-        },
-        {
-          "code": "add_users_page() – users.php"
-        },
-        {
-          "code": "add_management_page() – tools.php"
-        },
-        {
-          "code": "add_options_page() – options-general.php"
-        },
-        {
-          "code": "add_options_page() – settings.php"
-        },
-        {
-          "code": "add_links_page() – link-manager.php – requires a plugin since WP 3.5+"
-        },
-        {
-          "code": "Custom Post Type – edit.php?post_type=wporg_post_type"
-        },
-        {
-          "code": "Network Admin – settings.php"
-        }
-      ]
-    },
-    {
-      "title": "শর্টকোড",
-      "items": [
-        {
-          "code": "[caption]"
-        },
-        {
-          "code": "[gallery]"
-        },
-        {
-          "code": "[audio]"
-        },
-        {
-          "code": "[video]"
-        },
-        {
-          "code": "[playlist]"
-        },
-        {
-          "code": "[embed]"
-        },
-        {
-          "code": "add_shortcode()"
-        },
-        {
-          "code": "remove_shortcode()"
-        },
-        {
-          "code": "shortcode_exists()"
-        }
-      ]
-    },
-    {
-      "title": "সেটিংস",
-      "items": [
-        {
-          "code": "register_setting()"
-        },
-        {
-          "code": "unregister_setting()"
-        },
-        {
-          "code": "add_settings_section()"
-        },
-        {
-          "code": "add_settings_field()"
-        },
-        {
-          "code": "settings_fields()"
-        },
-        {
-          "code": "do_settings_sections()"
-        },
-        {
-          "code": "do_settings_fields()"
-        },
-        {
-          "code": "add_settings_error()"
-        },
-        {
-          "code": "get_settings_errors()"
-        },
-        {
-          "code": "settings_errors()"
-        },
-        {
-          "code": "add_option()"
-        },
-        {
-          "code": "get_option()"
-        },
-        {
-          "code": "update_option()"
-        },
-        {
-          "code": "delete_option()"
-        },
-        {
-          "code": "add_site_option()"
-        },
-        {
-          "code": "get_site_option()"
-        },
-        {
-          "code": "update_site_option()"
-        },
-        {
-          "code": "delete_site_option()"
-        }
-      ]
-    },
-    {
-      "title": "মেটাডাটা",
-      "items": [
-        {
-          "code": "add_post_meta( int $post_id, string $meta_key, mixed $meta_value, bool $unique = false )"
-        },
-        {
-          "code": "delete_post_meta( int $post_id, string $meta_key, mixed $meta_value = '' )"
-        },
-        {
-          "code": "update_post_meta( int $post_id, string $meta_key, mixed $meta_value, mixed $prev_value = '' )"
-        },
-        {
-          "code": "add_meta_box( string $id, string $title, callable $callback, string|array|WP_Screen $screen = null, string $context = 'advanced', string $priority = 'default', array $callback_args = null )"
-        }
-      ]
-    },
-    {
-      "title": "কাস্টম পোস্ট টাইপ & ট্যাক্সোনমি",
-      "items": [
-        {
-          "code": "register_post_type( string $post_type, array|string $args = array() )"
-        },
-        {
-          "code": "single-{post_type}.php"
-        },
-        {
-          "code": "archive-{post_type}.php"
-        },
-        {
-          "code": "register_taxonomy( string $taxonomy, array|string $object_type, array|string $args = array() )"
-        }
-      ]
-    },
-    {
-      "title": "ইউসার",
-      "items": [
-        {
-          "code": "wp_create_user( string $username, string $password, string $email = '' )"
-        },
-        {
-          "code": "wp_insert_user( array|object|WP_User $userdata )"
-        },
-        {
-          "code": "update_user_meta( int $user_id, string $meta_key, mixed $meta_value, mixed $prev_value = '' )"
-        },
-        {
-          "code": "wp_delete_user( int $id, int $reassign = null )"
-        }
-      ]
-    },
-    {
-      "title": "অনুবাদ",
-      "items": [
-        {
-          "code": "__()"
-        },
-        {
-          "code": "_e()"
-        },
-        {
-          "code": "_x()"
-        },
-        {
-          "code": "_ex()"
-        },
-        {
-          "code": "_n()"
-        },
-        {
-          "code": "_nx()"
-        },
-        {
-          "code": "_n_noop()"
-        },
-        {
-          "code": "_nx_noop()"
-        },
-        {
-          "code": "translate_nooped_plural()"
-        },
-        {
-          "code": "esc_html__()"
-        },
-        {
-          "code": "esc_html_e()"
-        },
-        {
-          "code": "esc_html_x()"
-        },
-        {
-          "code": "esc_attr__()"
-        },
-        {
-          "code": "esc_attr_e()"
-        },
-        {
-          "code": "esc_attr_x()"
-        },
-        {
-          "code": "number_format_i18n()"
-        },
-        {
-          "code": "date_i18n()"
-        }
-      ]
-    },
-    {
-      "title": "ডেভেলপার টুলস",
-      "items": [
-        {
-          "definition": "WordPress Plugin Boilerplate",
-          "code": "https://github.com/devinvinson/WordPress-Plugin-Boilerplate/"
-        },
-        {
-          "code": "https://wordpress.org/plugins/query-monitor/"
-        },
-        {
-          "code": "https://wordpress.org/plugins/debug-bar/"
-        },
-        {
-          "code": "https://wordpress.org/plugins/debug-bar-console/"
-        },
-        {
-          "code": "https://wordpress.org/plugins/debug-bar-shortcodes/"
-        },
-        {
-          "code": "https://wordpress.org/plugins/debug-bar-constants/"
-        },
-        {
-          "code": "https://wordpress.org/plugins/debug-bar-post-types/"
-        },
-        {
-          "code": "https://wordpress.org/plugins/debug-bar-cron/"
-        },
-        {
-          "code": "https://wordpress.org/plugins/debug-bar-actions-and-filters-addon/"
-        }
-      ]
-    }
-  ]
+    ]
 }

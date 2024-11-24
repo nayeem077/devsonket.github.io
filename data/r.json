@@ -29,6 +29,30 @@
             ]
         },
         {
+    "title": "লজিক্যাল অপারেটর R এ কিভাবে ব্যবহার করবেন",
+    "items": [{
+            "definition": "যৌক্তিক নয় | Logical NOT",
+            "code": "!"
+        },
+        {
+            "definition": "উপাদান-ভিত্তিক যৌক্তিক এবং | Element-wise Logical AND",
+            "code": "&"
+        },
+        {
+            "definition": "যৌক্তিক এবং | Logical AND",
+            "code": "&&"
+        },
+        {
+            "definition": "উপাদান-ভিত্তিক লজিক্যাল OR | Element-wise Logical OR",
+            "code": "|"
+        },
+        {
+            "definition": "যৌক্তিক OR | Logical OR",
+            "code": "||"
+        }
+    ]
+},
+        {
             "title": "কিভাবে R এ লাইব্রেবি ব্যবহার করবেন",
             "items": [{
                     "definition": "CRAN হতে প্যাকেজ ডাউনলোড এবং ইন্সটল",
@@ -119,11 +143,11 @@
                     "code": "x[-4]"
                 },
                 {
-                    "definition": "ভেক্টর হতে দ্বিতীয় ও চতূর্থ এলিমেন্ট সিলেক্ট",
+                    "definition": "ভেক্টর হতে দ্বিতীয় থেকে চতূর্থ এলিমেন্ট সিলেক্ট",
                     "code": "x[2:4]"
                 },
                 {
-                    "definition": "ভেক্টর হতে দ্বিতীয় ও চতুর্থ এলিমেন্ট বাদে বাকি সব সিলেক্ট",
+                    "definition": "ভেক্টর হতে দ্বিতীয় থেকে চতুর্থ এলিমেন্ট বাদে বাকি সব সিলেক্ট",
                     "code": "x[-(2:4)]"
                 },
                 {
@@ -235,6 +259,10 @@
                     "code": "sum(x)"
                 },
                 {
+                    "definition": "x এর সবগুলো সংখ্যার গুণফল",
+                    "code": "prod(x)"
+                },
+                {
                     "definition": "গড়",
                     "code": "mean(x)"
                 },
@@ -269,6 +297,18 @@
                 {
                     "definition": "ফ্যাক্টোরিয়াল",
                     "code": "factorial(x)"
+                },
+                {
+                    "definition": "সূচক (পাওয়ার)",
+                    "code": "x^n"
+                },
+                {
+                    "definition": "ভাগ করার পরে ভাগশেষ",
+                    "code": "x %% y"
+                },
+                {
+                    "definition": "ভাগফল (পূর্ণসংখ্যা)",
+                    "code": "x %/% y"
                 }
             ]
         },
@@ -295,6 +335,10 @@
                     "code": "t(m)"
                 },
                 {
+                    "definition": "ম্যাট্রিক্সের যোগফল",
+                    "code": "m + n"
+                },
+                {
                     "definition": "ম্যাট্রিক্স গুনন",
                     "code": "m %*% n"
                 },
@@ -309,6 +353,30 @@
                 {
                     "definition": "ম্যাট্রিক্স হতে একটি এলিমেন্ট সিলেক্ট",
                     "code": "m[2,2]"
+                },
+                {
+                    "definition": "ম্যাট্রিক্সের রো এর সমষ্টি",
+                    "code": "rowSums(m)"
+                },
+                {
+                    "definition": "ম্যাট্রিক্সের কলাম এর সমষ্টি",
+                    "code": "colSums(m)"
+                },
+                {
+                    "definition": "ম্যাট্রিক্সের ইনভার্স",
+                    "code": "solve(m)"
+                },
+                {
+                    "definition": "ম্যাট্রিক্সের নির্ণায়কের মান",
+                    "code": "det(m)"
+                },
+                {
+                    "definition": "ম্যাট্রিক্স(3x3) এ নতুন রো এড করা",
+                    "code": "rbind(m, c(1,2,3))"
+                },
+                {
+                    "definition": "ম্যাট্রিক্স(3x3) এ নতুন কলাম এড করা",
+                    "code": "cbind(m, c(1,2,3))"
                 }
             ]
         },
@@ -369,6 +437,26 @@
             ]
         },
         {
+    "title": "স্ট্রিং ম্যানিপুলেট করা | Manipulating Strings",
+    "items": [{
+            "definition": "স্প্লিট স্ট্রিং | Putting Together Strings ",
+            "code": "paste('string1', 'string2', sep = '/') \n # separator ('sep') is a space by default"
+        },
+        {
+            "definition": "'1/2' ফেরত | returns '1/2'",
+            "code": "paste(c('1', '2'), collapse = '/')"
+        },
+        {
+            "definition": "স্প্লিট স্ট্রিং | Split String",
+            "code": "stringr::str_split(string = v1, pattern = '-') \n # returns a list"
+        },
+        {
+            "definition": "সাবস্ট্রিং পাওয়া  | Get the substring",
+            "code": "stringr::str_sub(string = v1, start = 1, end = 3)"
+        }
+    ]
+},
+        {
             "title": "পরিসংখ্যান",
             "items": [{
                     "definition": "রৈখিক মডেল",
@@ -413,6 +501,39 @@
                 {
                     "definition": "x এর হিস্টোগ্রাম",
                     "code": "hist(x)"
+                },
+                {
+                    "definition": "x এর বক্সপ্লট",
+                    "code": "boxplot(x)"
+                },
+                {
+                    "definition": "x এর ডট চার্ট",
+                    "code": "dotchart(x)"
+                },
+                {
+                    "definition": "x এর পাই চার্ট",
+                    "code": "pie(x)"
+                }
+            ]
+        },
+        {
+            "title": "সেটের অপারেশন",
+            "items": [
+                {
+                    "definition": "দুইটি সেটের ইউনিয়ন",
+                    "code": "union(x, y)"
+                },
+                {
+                    "definition": "দুইটি সেটের ইন্টারসেকশন",
+                    "code": "intersect(x, y)"
+                },
+                {
+                    "definition": "দুইটি সেটের বিয়োগফল",
+                    "code": "setdiff(x, y)"
+                },
+                {
+                    "definition": "দুইটি সেটের মধ্যে তুলনা",
+                    "code": "setequal(x, y)"
                 }
             ]
         }

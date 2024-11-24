@@ -149,6 +149,37 @@
             ]
         },
         {
+            "title": "পাইথন ফাংশন (Python Function)",
+            "items": [{
+                    "definition": "ফাংশন হল কোডের এমন একটি ব্লক যা নির্দিষ্ট কোনো কাজ করে এবং প্রোগ্রামে যেকোনো জায়গায় পুনরায় ব্যবহার করা যেতে পারে\n\n",
+                    "code": "Syntax Of Function: def function_name(parameters):\n(function docstring)\n# function body",
+                    "code":"Parameters: Parameters are placeholders for the data that is passed to a function.\nArguments: Arguments are the actual values that are passed to a function when it is called.\nReturn value: A function can return a value, which can then be used in the program.",
+                    "definition": "ফাংশন বেসিক\n",
+                    "code": "def hello_world():\nprint('Hello, World!')"
+                },
+                {
+                    "definition": "Return (রিটার্ন)",
+                    "code": "def add(x, y):\n    print('x is %s, y is %s' %(x, y))\n    return x + y\nadd(5, 6)    # => 11"
+                },
+                {
+                    "definition": "Positional arguments",
+                    "code": "def varargs(*args):\n   return args\nvarargs(1, 2, 3)  # => (1, 2, 3)"
+                },
+                {
+                    "definition": "Returning Multiple",
+                    "code": "def swap(x, y):\n   return y, x\n\nx = 1\ny = 2\n x, y = swap(x, y)  # => x = 2, y = 1"
+                },
+                {
+                    "definition": "Default value",
+                    "code": "def add(x, y=10):\n   return x + y\nadd(5)      # => 15\nadd(5, 20)  # => 25"
+                },
+                {
+                    "definition": "Anonymous functions",
+                    "code": "# => True\n(lambda x: x > 2)(3)\n\n# => 5\n(lambda x, y: x ** 2 + y ** 2)(2, 1)"
+                }
+            ]
+        },
+        {
             "title": "পাইথন স্ট্রিং মেথড (Python String Methods)",
             "items": [{
                     "definition": "একটি স্ট্রিং এর প্রথম অক্ষরকে বড় হাতের অক্ষরে রূপান্তর করা",
@@ -277,6 +308,51 @@
                 {
                     "definition": "টুপলে একটি উপাদানের অবস্থান বের করা",
                     "code": "_tuple.index(value)"
+                }
+            ]
+        },
+        {
+            "title": "পাইথন ডিকশনারি মেথড (Python Dictionary Methods)",
+            "items": [
+                {
+                    "definition": "ডিকশনারি কি?",
+                    "code": "ডিকশনারি বিভিন্ন তথ্যের মধ্যে সংযোগ স্থাপন করে থাকে। ডিকশনারির মধ্যে তথ্যগুলো মূল-মান জোড়া (Key-Value pair) হিসেবে থাকে।"
+                },
+                {
+                    "definition": "একটি ডিকশনারির উদাহরণ। \nনিচের উদাহরণে কোলন(:) এর আগের অংশটিকে key এবং কোলন(:) এর পরের অংশটিকে value বলা হয়। প্রতিটি Key-Value pair একটি অপরটি থেকে কমা(,) দিয়ে পৃথক করা থাকে।",
+                    "code": "student = { 'name': 'John', 'age': 20 }"
+                },
+                {
+                    "definition": "ডিকশনারির থেকে যেকোনো ভ্যালু এক্সেস করা বা নেয়া",
+                    "code": "print(student['name']) -> 'John' \nprint(student['age']) -> 20"
+                },
+                {
+                    "definition": "get() দিয়ে ডিকশনারির থেকে যেকোনো ভ্যালু এক্সেস করা বা নেয়া। \nযদি যে key টি এক্সেস করতে চাচ্ছি, তা না থেকে থাকে, তবে get() ব্যবহার করলে কোনো error না দেখিয়ে None দেখাবে। কিন্তু উপরের পদ্ধতিটি ব্যবহার করলে key না পেলে error দেখিয়ে আপনার প্রোগ্রাম ব্রেক করতে পারে। তাই নিরাপদ হল get() ব্যবহার করে key এর মাধ্যমে value এক্সেস করা। নিচের উদাহরণে 'address' নামে আমাদের কোনো key নেই, তাই value হিসেবে None আসবে।",
+                    "code": "print(student['name']) -> John \nprint(student.get('address')) -> None"
+                },
+                {
+                    "definition": "ডিকশনারিতে একটি নতুন Key-Value pair যোগ করা",
+                    "code": "student['gpa'] = 4.0 \n-> নতুন ডিকশনারিটি হবে, student = {'name': 'John', , 'age': 20, 'gpa': 4.0}"
+                },
+                {
+                    "definition": "ডিকশনারি এর সকল key গুলো নিয়ে list বানানোর পদ্ধতি",
+                    "code": "list(student.keys()) \n-> ['name', 'age', 'gpa']"
+                },
+                {
+                    "definition": "ডিকশনারি এর সকল value গুলো নিয়ে list বানানোর পদ্ধতি",
+                    "code": "list(student.values()) \n-> ['John', 20, 4.0]"
+                },
+                {
+                    "definition": "ডিকশনারি এর সকল (key, value) গুলো নিয়ে list বানানোর পদ্ধতি",
+                    "code": "list(student.items()) \n-> [('name', 'John'), ('age', 20), ('gpa', 4.0)]"
+                },
+                {
+                    "definition": "ডিকশনারি থেকে Key-Value pair বাদ দেয়া বা remove করা",
+                    "code": "del student['gpa'] \n-> নতুন ডিকশনারিটি হবে, student = {'name': 'John', , 'age': 20}"
+                },
+                {
+                    "definition": "Dictionary Comprehension (সহজে ডিকশনারি তৈরি)",
+                    "code": "squares = {x:x**2 for x in range(5)} \n-> {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}"
                 }
             ]
         },
@@ -473,6 +549,38 @@
                 {
                     "definition": "কলামের নাম পরিবর্তন করা",
                     "code": "df.rename(columns = {'old_name': 'new_name'})"
+                }
+            ]
+        },
+        {
+            "title": "রিকোয়েস্ট লাইব্রেরি (Requests Library)",
+            "items": [{
+                    "definition": "রিকোয়েস্ট ইনস্টল করা",
+                    "code": "pip install requests"
+                },
+                {
+                    "definition": "রিকোয়েস্ট ইম্পোর্ট করা",
+                    "code": "import requests"
+                },
+                {
+                    "definition": "ওয়েবসাইট থেকে ডেটা গ্রহন করা",
+                    "code": "r = requests.get('https://api.github.com/events')"
+                },
+                {
+                    "definition": "স্ট্যাটাস কোড চেক করা",
+                    "code": "r.status_code"
+                },
+                {
+                    "definition": "হেডার চেক করা",
+                    "code": "r.headers"
+                },
+                {
+                    "definition": "টেক্সট চেক করা",
+                    "code": "r.text"
+                },
+                {
+                    "definition": "জেসন চেক করা",
+                    "code": "r.json()"
                 }
             ]
         },
